@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://api.mapbox.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.workers.dev https://api.mapbox.com https://events.mapbox.com;">
+<script src="assets/js/runtime-config.js"></script>
+<script src="assets/js/api-client.js"></script>
+<link href="assets/css/header-premium-v1.css?v=1" rel="stylesheet"/>
+<link href="assets/css/loader-premium-v1.css?v=1" rel="stylesheet"/
+<link href="assets/css/footer-premium-v1.css?v=floating-whatsapp-mobile-v5" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Qoffa Smart - سياسة الإرجاع</title>
+<!-- PWA Manifest and Meta Tags -->
+<link href="manifest.json" rel="manifest"/>
+<meta content="#2E8B57" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="assets/images/logo.png" rel="icon" type="image/png"/>
+<link href="assets/images/logo.png" rel="apple-touch-icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+<style>
+        /* ==================== VARIABLE WEIGHT STYLES ==================== */
+        .vw-weight-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2E8B57;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .cart-item-weight-display {
+            font-size: 0.8rem;
+            color: #2E8B57;
+            margin-top: 5px;
+        }
+        
+        .weight-value {
+            font-weight: 700;
+        }
+        
+        .weight-qty {
+            font-size: 0.7rem;
+            color: #888;
+            margin-right: 5px;
+        }
+
+        /* ==================== LOADER STYLES ==================== */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            backdrop-filter: blur(3px);
+        }
+        
+        .loader.active {
+            display: flex;
+        }
+        
+        .loader-logo img {
+            width: 80px;
+            height: 80px;
+            animation: loaderPulse 1.5s ease infinite;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #2E8B57;
+            border-radius: 50%;
+            animation: loaderSpin 0.8s linear infinite;
+            margin-top: 20px;
+        }
+        
+        .loader-text {
+            margin-top: 15px;
+            color: #2E8B57;
+            font-weight: 600;
+        }
+        
+        @keyframes loaderSpin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* ===== RETURN POLICY PAGE STYLES ===== */
+        .policy-hero {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            padding: 100px 0 80px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 0 96%);
+        }
+        .policy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 15% 85%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 85% 15%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        .policy-hero .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .policy-hero .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        }
+        .policy-hero .hero-subtitle {
+            font-size: 1.4rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        .policy-intro {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+            padding: 40px;
+            border-radius: 16px;
+            border-right: 5px solid #2E8B57;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+        .policy-intro p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+        }
+        .policy-section {
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+        .policy-section h2 {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            font-weight: 700;
+        }
+        .policy-section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+        .policy-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .policy-section li {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 12px 0;
+            padding-right: 25px;
+            position: relative;
+        }
+        .policy-section li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: #2E8B57;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .policy-highlight {
+            background: linear-gradient(135deg, rgba(46,139,87,0.08), rgba(60,179,113,0.06));
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid #2E8B57;
+            margin: 20px 0;
+            font-weight: 500;
+            color: #2E8B57;
+        }
+        .policy-warning {
+            background: linear-gradient(135deg, rgba(255,152,0,0.08), rgba(255,193,7,0.06));
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid #FF9800;
+            margin: 20px 0;
+            font-weight: 500;
+            color: #FF9800;
+        }
+        .policy-important {
+            background: linear-gradient(135deg, rgba(220,53,69,0.08), rgba(220,53,69,0.06));
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid #dc3545;
+            margin: 20px 0;
+            font-weight: 500;
+            color: #dc3545;
+        }
+        .policy-steps {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .step-number {
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            background: #2E8B57;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step-content h4 {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin: 0 0 8px;
+            font-weight: 700;
+        }
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .policy-table th {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            padding: 15px;
+            text-align: right;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .policy-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .policy-table tr:last-child td { border-bottom: none; }
+        .policy-table tr:nth-child(even) { background: #f8f9fa; }
+        .policy-cta {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 10px 30px rgba(46,139,87,0.2);
+        }
+        .policy-cta h3 {
+            font-size: 1.8rem;
+            margin: 0 0 15px;
+            font-weight: 700;
+        }
+        .policy-cta p {
+            font-size: 1.1rem;
+            margin: 0 0 25px;
+            opacity: 0.95;
+        }
+        .policy-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 35px;
+            background: white;
+            color: #2E8B57;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        .policy-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            background: #f0f0f0;
+        }
+        
+        /* Cart item styles */
+        .cart-item {
+            position: relative;
+            display: flex;
+            gap: 12px;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .cart-item-remove {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            background: #fee;
+            color: #e53935;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+        .cart-item-remove:hover {
+            background: #e53935;
+            color: white;
+        }
+        .cart-item-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        .cart-item-info {
+            flex: 1;
+        }
+        .cart-item-name {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .cart-item-price {
+            color: #2E8B57;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .cart-item-quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+        }
+        .qty-input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 4px;
+        }
+        .cart-empty {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .policy-hero .hero-title { font-size: 2.5rem; }
+            .policy-hero .hero-subtitle { font-size: 1rem; }
+            .policy-intro { padding: 25px; }
+            .policy-section h2 { font-size: 1.4rem; }
+            .section-number { width: 40px; height: 40px; font-size: 1rem; }
+            .policy-cta { padding: 35px 20px; }
+            .policy-cta h3 { font-size: 1.4rem; }
+            .policy-cta p { font-size: 0.95rem; }
+            .toast {
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                max-width: none;
+                text-align: center;
+                justify-content: center;
+            }
+            .confirmation-content {
+                padding: 25px 20px;
+                max-width: 380px;
+            }
+            .confirmation-title {
+                font-size: 1.2rem;
+            }
+            .confirmation-btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .policy-hero { padding: 60px 0 40px; margin-bottom: 30px; }
+            .policy-hero .hero-title { font-size: 2rem; }
+            .policy-section h2 { font-size: 1.2rem; }
+            .policy-intro { padding: 20px; }
+            .policy-intro p { font-size: 0.95rem; }
+            .policy-steps { padding: 20px; }
+            .policy-table th, .policy-table td { padding: 10px; }
+        }
+    </style>
+<link href="assets/css/brand-refresh.css" rel="stylesheet"/><link href="assets/css/return-policy-premium-v2.css?v=1" rel="stylesheet"/><link href="assets/css/footer-premium-v1.css?v=1" rel="stylesheet"/><link href="assets/css/rtl-scroll-fix.css?v=1" rel="stylesheet"/><link href="assets/css/cart-freshmart.css?v=cart-order-unified-v1" rel="stylesheet"/></head>
+<body class="return-policy-page">
+<!-- Header -->
+<header id="mainHeader">
+<div class="container">
+<nav class="navbar">
+<a class="logo" href="index.html">
+<img alt="Qoffa Smart" class="logo-img" src="assets/images/logo.png"/>
+<span class="logo-text">Qoffa Smart</span>
+</a>
+<ul class="nav-menu" id="navMenu">
+<li><a class="nav-link" href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+<li><a class="nav-link" href="products.html"><i class="fas fa-store"></i> المنتجات</a></li>
+<li><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+<li><a class="nav-link" href="contact.html"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+</ul>
+<div class="nav-actions">
+<button class="cart-btn" id="cartBtn">
+<i class="fas fa-shopping-cart"></i>
+<span class="cart-count">0</span>
+</button>
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="policy-hero">
+<div class="container">
+<div class="hero-content">
+<h1 class="hero-title animate__animated animate__fadeInDown">سياسة الإرجاع</h1>
+<p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                    نحن نضمن رضاك عن المنتجات التي تتلقاها
+                </p>
+</div>
+</div>
+</section>
+<!-- Policy Content -->
+<section class="policy-container">
+<div class="policy-intro animate__animated animate__fadeIn">
+<p>
+<i class="fas fa-info-circle" style="color: #2E8B57; margin-left: 10px;"></i>
+<strong>مرحبًا بك في Qoffa Smart!</strong> نريد أن تكون راضياً تماماً عن كل عملية شراء معنا. تصف سياسة الإرجاع هذه حقوقك وكيفية التعامل مع المنتجات المعيبة أو غير المطابقة للطلب.
+            </p>
+</div>
+<!-- Section 1 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">1</span> حق الاسترجاع والاسترداد</h2>
+<p>بسبب الطبيعة القابلة للتلف للمنتجات الغذائية، نحن لا نوفر حق استرجاع عام للمنتجات الطازجة. ومع ذلك، يمكنك استرجاع أو استرداد أموالك في الحالات التالية:</p>
+<ul>
+<li>المنتج معيب أو تالف عند الاستلام</li>
+<li>المنتج لا يطابق وصفك أو صورة الطلب</li>
+<li>المنتج انتهت صلاحيته أو قرب انتهاء صلاحيته بشكل غير متوقع</li>
+<li>خطأ في الطلب أو الشحنة</li>
+</ul>
+<div class="policy-important">
+<i class="fas fa-exclamation-triangle" style="margin-left: 10px;"></i>
+<strong>ملاحظة مهمة:</strong> جميع المنتجات الطازجة يجب فحصها عند الاستلام. إذا كان هناك أي مشكلة، يجب إخطارنا فوراً.
+            </div>
+</div>
+<!-- Section 2 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">2</span> المنتجات المعيبة أو غير المطابقة</h2>
+<p>إذا تلقيت منتجاً معيباً أو لا يطابق طلبك، نحن هنا لمساعدتك. يرجى اتباع الخطوات التالية:</p>
+<div class="policy-steps">
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>توثيق المشكلة بالصور</h4>
+<p>التقط صوراً واضحة للمنتج المعيب قبل التخلص منه. هذه الصور ستساعدنا في حل المشكلة بسرعة.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>التواصل معنا خلال 24 ساعة</h4>
+<p>أرسل لنا الصور والتفاصيل من خلال البريد الإلكتروني أو الواتس آب مع إرفاق رقم الطلب.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>معالجة الطلب</h4>
+<p>سنراجع الصور والتفاصيل وسيتم معالجة طلب استردادك أو استبدالك حسب الحالة.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">3</span> إجراء الإرجاع والاستبدال</h2>
+<p>للمنتجات المؤهلة للإرجاع، يرجى اتباع هذه الخطوات:</p>
+<ul>
+<li>اتصل بخدمة العملاء لدينا في غضون 24 ساعة من الاستلام</li>
+<li>قم بتحضير المنتج للإرجاع في عبوته الأصلية</li>
+<li>سننظم استرجاع المنتج أو توفير بديل</li>
+<li>يجب الحفاظ على حالة المنتج قدر الإمكان</li>
+</ul>
+<div class="policy-highlight">
+<i class="fas fa-truck"></i>
+<strong>التسليم والاسترجاع:</strong> نحن نتحمل تكاليف الاسترجاع للمنتجات المعيبة أو غير المطابقة.
+            </div>
+</div>
+<!-- Section 4 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">4</span> استرجاع الأموال</h2>
+<p>عند الموافقة على طلب استرجاع الأموال، يتم معالجة المبلغ بالطريقة التالية:</p>
+<table class="policy-table">
+<thead>
+<tr>
+<th>طريقة الدفع الأصلية</th>
+<th>طريقة الاسترجاع</th>
+<th>المدة الزمنية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>البطاقة البنكية</td>
+<td>استرجاع إلى البطاقة</td>
+<td>5-7 أيام عمل</td>
+</tr>
+<tr>
+<td>التحويل البنكي</td>
+<td>تحويل إلى الحساب</td>
+<td>5-10 أيام عمل</td>
+</tr>
+<tr>
+<td>الدفع عند الاستلام</td>
+<td>استرداد نقداً أو شيك</td>
+<td>يومان عمل</td>
+</tr>
+</tbody>
+</table>
+<div class="policy-highlight">
+<i class="fas fa-hourglass-half" style="margin-left: 10px;"></i>
+<strong>المعالجة:</strong> قد يستغرق استرجاع الأموال حتى 10 أيام عمل حسب بنك الدفع.
+            </div>
+</div>
+<!-- Section 5 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">5</span> الاستثناءات (المنتجات غير القابلة للإرجاع)</h2>
+<p>المنتجات التالية لا يمكن إرجاعها أو استرجاع أموالها:</p>
+<ul>
+<li>المنتجات الطازجة المفتوحة أو المستهلكة جزئياً</li>
+<li>المنتجات المحفوظة في ظروف غير صحيحة</li>
+<li>المنتجات المعروضة بشكل واضح في الكتالوج كـ "غير قابلة للإرجاع"</li>
+<li>المنتجات التي انتهت صلاحيتها بسبب عدم الاستهلاك في الوقت المناسب</li>
+<li>المنتجات التي تم تغيير عبوتها أو فقدت هويتها</li>
+</ul>
+<div class="policy-warning">
+<i class="fas fa-exclamation-circle" style="margin-left: 10px;"></i>
+<strong>تنويه:</strong> نحن نحتفظ بالحق في رفض أي طلب إرجاع لا يستوفي هذه المعايير.
+            </div>
+</div>
+<!-- Section 6 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">6</span> الاستبدال بدلاً من الاسترجاع</h2>
+<p>في حالة العيب أو عدم المطابقة، قد نقدم لك:</p>
+<ul>
+<li>استبدال المنتج بنفس الصنف أو صنف مشابه</li>
+<li>استبدال بمنتج آخر من نفس القيمة أو أعلى</li>
+<li>استرجاع كامل المبلغ بدون أي خصومات</li>
+<li>اختيار الخيار الذي يناسبك أكثر</li>
+</ul>
+<div class="policy-highlight">
+<i class="fas fa-sync" style="margin-left: 10px;"></i>
+<strong>الاستبدال السريع:</strong> نحاول توفير بديل خلال 24 ساعة من تأكيد المشكلة.
+            </div>
+</div>
+<!-- Section 7 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">7</span> فترة الإرجاع</h2>
+<p>الإطار الزمني لطلب الإرجاع:</p>
+<ul>
+<li>يجب إخطارنا بالمشكلة في غضون 24 ساعة من الاستلام</li>
+<li>يجب تقديم صور توثيقية للمشكلة</li>
+<li>يجب الاحتفاظ بالمنتج في أفضل حالة ممكنة</li>
+<li>بعد 48 ساعة من الاستلام، لن نتمكن من استقبال طلبات الإرجاع</li>
+</ul>
+<div class="policy-important">
+<i class="fas fa-clock" style="margin-left: 10px;"></i>
+<strong>الالتزام بالمواعيد:</strong> التأخير عن الإبلاغ قد يؤدي إلى فقدان حق الإرجاع.
+            </div>
+</div>
+<!-- Section 8 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">8</span> الإرجاع والشحن</h2>
+<p>تفاصيل عملية الإرجاع:</p>
+<ul>
+<li>المنتجات المعيبة: Qoffa Smart تتحمل تكاليف الإرجاع</li>
+<li>المنتجات الأخرى: قد تتحمل تكاليف الإرجاع</li>
+<li>سنوفر عنوان محدد للإرجاع عند الموافقة على الطلب</li>
+<li>يجب تسليم المنتج في عبوة آمنة وموثقة</li>
+</ul>
+</div>
+<!-- Section 9 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">9</span> خدمة العملاء والدعم</h2>
+<p>إذا كان لديك أي أسئلة حول سياسة الإرجاع أو تريد بدء عملية إرجاع، يمكنك التواصل معنا:</p>
+<ul>
+<li><strong>البريد الإلكتروني:</strong> qoffasmart@gmail.com</li>
+<li><strong>الهاتف:</strong> +212 668 676 565</li>
+<li><strong>الواتس آب:</strong> +212 668 676 565</li>
+<li><strong>ساعات العمل:</strong> من الأحد إلى الخميس، 9:00 - 18:00</li>
+</ul>
+<div class="policy-highlight">
+<i class="fas fa-headset" style="margin-left: 10px;"></i>
+<strong>فريقنا متاح دائماً:</strong> نحن هنا لمساعدتك وحل أي مشكلة بسرعة واحترافية.
+            </div>
+</div>
+<!-- Section 10 -->
+<div class="policy-section animate__animated animate__fadeInUp">
+<h2><span class="section-number">10</span> حالات خاصة وملاحظات نهائية</h2>
+<p>حالات خاصة قد تؤثر على سياسة الإرجاع:</p>
+<ul>
+<li>الطلبات المخصصة أو المعدة حسب الطلب لا يمكن إرجاعها</li>
+<li>المنتجات المعروضة كـ "تصفية" أو "خصم خاص" قد لا تكون قابلة للإرجاع</li>
+<li>في حالة القوة القاهرة، قد تتأثر معالجة طلبات الإرجاع</li>
+<li>نحتفظ بالحق في تعديل هذه السياسة في أي وقت</li>
+</ul>
+<div class="policy-important">
+<i class="fas fa-info-circle" style="margin-left: 10px;"></i>
+<strong>الشفافية والعدل:</strong> نلتزم بمعاملة جميع طلبات الإرجاع بشفافية وعدالة.
+            </div>
+</div>
+<!-- CTA Section -->
+<div class="policy-cta animate__animated animate__fadeInUp">
+<h3>هل لديك سؤال حول سياسة الإرجاع؟</h3>
+<p>فريقنا متاح للإجابة على جميع أسئلتك والمساعدة في حل أي مشاكل</p>
+<a class="policy-cta-btn" href="contact.html">
+<i class="fas fa-envelope"></i>
+                تواصل معنا الآن
+            </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="qoffa-premium-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<a class="footer-logo" href="index.html">
+<img alt="Qoffa Smart" src="assets/images/logo.png"/>
+<h3>Qoffa Smart</h3>
+</a>
+<p class="footer-description">
+                        منصة ذكية لتوصيل الخضر والفواكه الطازجة محليًا. نقدم حلًا مبتكرًا يجمع بين جودة المنتجات وتكنولوجيا التوصيل الحديثة لراحتك ورضاك.
+                    </p>
+<div class="social-links"><a aria-label="Instagram" class="social-link" data-platform="instagram" href="https://www.instagram.com/qoffasmart.ma" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a aria-label="Facebook" class="social-link" data-platform="facebook" href="https://www.facebook.com/profile.php?id=61591584153942" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a><a aria-label="WhatsApp" class="social-link" data-platform="whatsapp" href="https://wa.me/212668676565" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a><a aria-label="TikTok" class="social-link" data-platform="tiktok" href="https://www.tiktok.com/@qoffasmart.ma" rel="noopener noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a><a aria-label="LinkedIn" class="social-link" data-platform="linkedin" href="https://www.linkedin.com/company/qoffasmart/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+</div>
+<div class="footer-col">
+<h4>روابط سريعة</h4>
+<ul class="footer-links">
+<li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+<li><a href="products.html"><i class="fas fa-store"></i> جميع المنتجات</a></li>
+<li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+<li><a href="contact.html"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>فئات المنتجات</h4>
+<ul class="footer-links">
+<li><a href="products.html?category=fruits"><i class="fas fa-apple-alt"></i> فواكه طازجة</a></li>
+<li><a href="products.html?category=vegetables"><i class="fas fa-carrot"></i> خضروات الموسم</a></li>
+<li><a href="products.html?category=herbs"><i class="fas fa-leaf"></i> أعشاب وسلطات</a></li>
+<li><a href="products.html?category=bundles"><i class="fas fa-gift"></i> الباقات الجاهزة</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>معلومات التواصل</h4>
+<div class="contact-info">
+<div class="contact-item">
+<i class="fas fa-phone-alt"></i>
+<div>
+<a href="tel:+212668676565">+212668-676565</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fab fa-whatsapp"></i>
+<div>
+<a href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">واتساب</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<div>
+<a href="mailto:qoffasmart@gmail.com">qoffasmart@gmail.com</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-clock"></i>
+<div>يومياً: 8:00 صباحاً - 10:00 مساءً</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-map-marker-alt"></i>
+<div>الدار البيضاء، المملكة المغربية</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-policies">
+<a href="terms.html">الشروط والأحكام</a>
+<span>|</span>
+<a href="return-policy.html">سياسة الإرجاع</a>
+</div>
+<p>© 2025 Qoffa Smart. جميع الحقوق محفوظة.</p>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="whatsapp-float" href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i>
+</a>
+<!-- Back to Top Button -->
+<a class="back-to-top" href="#" id="backToTop">
+<i class="fas fa-arrow-up"></i>
+</a>
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+<div class="cart-header">
+<h2><i class="fas fa-shopping-cart"></i> سلة التسوق</h2>
+<div class="cart-header-actions">
+<button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+</div>
+</div>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-footer">
+<div class="total-indicator" id="totalIndicator">
+<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+<span class="total-icon">💰</span>
+<span class="total-text" id="sidebarTotalText">المجموع الإجمالي: 0.00 درهم</span>
+</div>
+<div class="min-order-msg" id="sidebarMinOrderMsg">الحد الأدنى للطلب هو 150 درهم</div>
+</div>
+<div class="cart-total"><span>المجموع:</span><span id="cartTotalPrice">0.00 درهم</span></div>
+<button class="cart-checkout" id="cartCheckout">إتمام الطلب</button>
+</div>
+</div>
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+<!-- Loader -->
+<div class="loader active" id="pageLoader">
+<div class="loader-logo">
+<img alt="Loading..." src="assets/images/logo.png"/>
+</div>
+<div class="loader-spinner"></div>
+<p class="loader-text">جاري التحميل...</p>
+</div>
+<!-- Confirmation Modal -->
+<div class="confirmation-modal" id="confirmationModal">
+<div class="confirmation-content">
+<div class="confirmation-icon">
+<i class="fas fa-trash-alt"></i>
+</div>
+<h2 class="confirmation-title">حذف من السلة</h2>
+<p class="confirmation-message">
+                هل أنت متأكد من حذف 
+                <span class="confirmation-product-name" id="confirmProductName">المنتج</span>
+                من السلة؟
+            </p>
+<div class="confirmation-actions">
+<button class="confirmation-btn confirmation-btn-cancel" id="modalCancelBtn">
+<i class="fas fa-times"></i> إلغاء
+                </button>
+<button class="confirmation-btn confirmation-btn-delete" id="modalConfirmBtn">
+<i class="fas fa-trash-alt"></i> حذف
+                </button>
+</div>
+</div>
+</div>
+<script>
+        // ==================== CONFIGURATION ====================
+        const BASEROW_TOKEN = '';
+        const BASEROW_TABLE_ID = '882093';
+        
+        // ==================== GLOBAL VARIABLES ====================
+        let pendingDeleteItem = null;
+        let preventCartClose = false;
+        let preventCartCloseTimer = null;
+        window.preventCartClose = false;
+
+        // ==================== HELPER FUNCTIONS ====================
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+            
+            document.querySelectorAll('.toast').forEach(t => t.remove());
+            
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : type === 'warning' ? 'fa-exclamation-triangle' : 'fa-info-circle'}"></i><span>${message}</span>`;
+            container.appendChild(toast);
+            
+            setTimeout(() => {
+                if (toast && toast.remove) toast.remove();
+            }, 3500);
+        }
+
+        function handleImageError(img) {
+            img.src = 'https://via.placeholder.com/80/2E8B57/ffffff?text=Qoffa';
+            img.onerror = null;
+        }
+
+        function getOptimizedImage(url, options = {}) {
+            if (!url || url.includes('undefined') || url.includes('null')) return 'https://via.placeholder.com/300/2E8B57/ffffff?text=Qoffa';
+            if (url.includes('images.weserv.nl') || url.includes('assets/') || url.includes('placeholder')) return url;
+            const width = options.width || 300;
+            return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=${width}&q=80&output=webp&l=9`;
+        }
+
+        function isVariableWeightItem(item) {
+            return item && item.isVariableWeight === true;
+        }
+
+        // ==================== BASEROW SYNC ====================
+        function vwParseWeights(rawWeights) {
+            if (!rawWeights) return [];
+            if (typeof rawWeights === 'string') {
+                try {
+                    const parsed = JSON.parse(rawWeights);
+                    return Array.isArray(parsed) ? parsed.map(w => parseFloat(w)).filter(w => !isNaN(w) && w > 0) : [];
+                } catch (e) {
+                    return rawWeights.split(',').map(w => parseFloat(w.trim())).filter(w => !isNaN(w) && w > 0);
+                }
+            }
+            if (Array.isArray(rawWeights)) return rawWeights.map(w => parseFloat(w)).filter(w => !isNaN(w) && w > 0);
+            return [];
+        }
+
+        async function vwSyncWithBaserow(productId, weight, action) {
+            const label = action === 'remove' ? 'حجز' : 'إرجاع';
+            console.log(`🔄 ${label} الوزن ${weight} للمنتج ${productId}`);
+            
+            try {
+                const fetchUrl = `https://api.baserow.io/api/database/rows/table/${BASEROW_TABLE_ID}/${productId}/?user_field_names=true`;
+                const response = await fetch(fetchUrl, { 
+                    headers: { 'Authorization': `Token ${BASEROW_TOKEN}` } 
+                });
+                
+                if (!response.ok) return false;
+                
+                const row = await response.json();
+                let weights = vwParseWeights(row.available_weights);
+                const parsedWeight = parseFloat(weight);
+                
+                if (action === 'remove') {
+                    const idx = weights.findIndex(w => Math.abs(parseFloat(w) - parsedWeight) < 0.01);
+                    if (idx !== -1) weights.splice(idx, 1);
+                    else return false;
+                } else {
+                    weights.push(parsedWeight);
+                    weights.sort((a, b) => a - b);
+                }
+                
+                const patchResponse = await fetch(fetchUrl, {
+                    method: 'PATCH',
+                    headers: { 
+                        'Authorization': `Token ${BASEROW_TOKEN}`, 
+                        'Content-Type': 'application/json' 
+                    },
+                    body: JSON.stringify({ available_weights: JSON.stringify(weights) })
+                });
+                
+                return patchResponse.ok;
+            } catch (error) {
+                console.error('❌ Baserow error:', error);
+                return false;
+            }
+        }
+
+        async function vwReturnWeightToBaserow(item) {
+            if (!item?.isVariableWeight) return true;
+            if (!item.baseId || !item.weight) return true;
+            return await vwSyncWithBaserow(item.baseId, item.weight, 'add');
+        }
+
+        // ==================== CONFIRMATION MODAL FUNCTIONS ====================
+        function showConfirmationModal(item) {
+            console.log('📋 عرض Modal للحذف:', item);
+            pendingDeleteItem = item;
+            
+            const confirmProductName = document.getElementById('confirmProductName');
+            if (confirmProductName) {
+                const displayName = item.name_fr || item.name || 'المنتج';
+                const weightInfo = item.isVariableWeight ? ` (${item.weight}${item.unit || 'كجم'})` : '';
+                confirmProductName.textContent = displayName + weightInfo;
+            }
+            
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function cancelDelete() {
+            console.log('❌ إلغاء الحذف');
+            pendingDeleteItem = null;
+            
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar) cartSidebar.classList.add('active');
+        }
+
+        async function confirmProductDelete() {
+            if (!pendingDeleteItem) {
+                console.warn('⚠️ no pendingDeleteItem');
+                return;
+            }
+            
+            const itemToDelete = pendingDeleteItem;
+            const itemName = itemToDelete.name_fr || itemToDelete.name || 'المنتج';
+            
+            console.log(`🗑️ تأكيد حذف المنتج: ${itemName}`);
+            
+            // ✅ إذا كان منتج Variable Weight، نعيد الوزن إلى Baserow أولاً
+            if (itemToDelete.isVariableWeight) {
+                console.log(`🔄 إرجاع الوزن ${itemToDelete.weight} للمنتج ${itemToDelete.baseId}`);
+                showToast(`⏳ جاري إرجاع ${itemName} للمخزون...`, 'info');
+                
+                const returnResult = await vwReturnWeightToBaserow(itemToDelete);
+                
+                if (!returnResult) {
+                    console.error(`❌ فشل إرجاع الوزن`);
+                    showToast(`⚠️ فشل إرجاع المنتج للمخزون، حاول مرة أخرى`, 'error');
+                    cancelDelete();
+                    return;
+                }
+                console.log(`✅ تم إرجاع الوزن بنجاح`);
+                showToast(`✅ تم إرجاع ${itemName} للمخزون`, 'success');
+            }
+            
+            // حذف المنتج من السلة
+            const itemId = itemToDelete.id;
+            let cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            cart = cart.filter(item => item.id !== itemId);
+            localStorage.setItem('qoffaCart', JSON.stringify(cart));
+            updateCartCount();
+            updateCartSidebar();
+            
+            // إغلاق الـ Modal
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            pendingDeleteItem = null;
+            
+            // إظهار السلة ومنع الإغلاق المؤقت
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar) cartSidebar.classList.add('active');
+            
+            preventCartClose = true;
+            window.preventCartClose = true;
+            if (preventCartCloseTimer) clearTimeout(preventCartCloseTimer);
+            preventCartCloseTimer = setTimeout(() => { 
+                preventCartClose = false;
+                window.preventCartClose = false;
+            }, 500);
+            
+            showToast(`✅ تم إزالة ${itemName} من السلة`, 'success');
+        }
+
+        // ==================== CART FUNCTIONS ====================
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.querySelectorAll('.cart-count').forEach(el => el.textContent = count);
+        }
+
+        function updateCartSidebar() {
+            const cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const container = document.getElementById('cartItems');
+            const totalEl = document.getElementById('cartTotalPrice');
+            const totalText = document.getElementById('sidebarTotalText');
+            const minOrderMsg = document.getElementById('sidebarMinOrderMsg');
+            const checkoutBtn = document.getElementById('cartCheckout');
+            
+            if (!container) return;
+            
+            if (!cart.length) {
+                container.innerHTML = `<div class="cart-empty"><i class="fas fa-shopping-cart fa-3x"></i><p>السلة فارغة</p><a href="products.html" class="btn-primary">تصفح المنتجات</a></div>`;
+                if (totalEl) totalEl.textContent = '0.00 درهم';
+                if (totalText) totalText.textContent = 'المجموع الإجمالي: 0.00 درهم';
+                if (minOrderMsg) minOrderMsg.style.display = 'none';
+                if (checkoutBtn) { checkoutBtn.disabled = true; checkoutBtn.style.opacity = '0.5'; }
+                return;
+            }
+            
+            let total = 0;
+            let html = '';
+            
+            cart.forEach(item => {
+                total += item.price * (item.quantity || 1);
+                const isVar = isVariableWeightItem(item);
+                const img = (item.image && typeof getOptimizedImage === 'function') 
+                    ? getOptimizedImage(item.image, { width: 80, quality: 75 }) 
+                    : (item.image || 'https://via.placeholder.com/80');
+                
+                html += `
+                    <div class="cart-item" style="position: relative;">
+                        <button class="cart-item-remove" onclick="removeCartItem('${item.id}', '${item.name.replace(/'/g, "\\'")}')" title="حذف">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <img src="${img}" alt="${item.name}" onerror="handleImageError(this)" class="cart-item-img">
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}${isVar ? ` <span class="vw-weight-badge">${item.weight}${item.unit || 'كجم'}</span>` : ''}</div>
+                            <div class="cart-item-price">${item.price.toFixed(2)} درهم</div>
+                            ${!isVar ? `<div class="cart-item-quantity-controls">
+                                <button class="qty-btn qty-minus" onclick="event.stopPropagation(); decreaseQuantity(${item.id})" title="تقليل">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" class="qty-input" value="${item.quantity || 1}" 
+                                       onchange="updateQuantity(${item.id}, parseInt(this.value))" 
+                                       min="1" max="100">
+                                <span class="qty-unit">${item.unit || 'كيلو'}</span>
+                                <button class="qty-btn qty-plus" onclick="event.stopPropagation(); increaseQuantity(${item.id})" title="زيادة">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>` : `<div class="cart-item-weight-display"><span class="weight-value">${item.weight}${item.unit || 'كجم'}</span>${item.quantity > 1 ? `<span class="weight-qty">× ${item.quantity}</span>` : ''}</div>`}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            if (totalEl) totalEl.textContent = total.toFixed(2) + ' درهم';
+            if (totalText) totalText.textContent = `💰 المجموع الإجمالي: ${total.toFixed(2)} درهم`;
+            
+            if (checkoutBtn) {
+                if (total >= 150) {
+                    checkoutBtn.disabled = false;
+                    checkoutBtn.style.opacity = '1';
+                    checkoutBtn.style.cursor = 'pointer';
+                } else {
+                    checkoutBtn.disabled = true;
+                    checkoutBtn.style.opacity = '0.5';
+                    checkoutBtn.style.cursor = 'not-allowed';
+                }
+            }
+            
+            if (minOrderMsg) minOrderMsg.style.display = total < 150 ? 'block' : 'none';
+        }
+
+        function removeCartItem(productId, productName) {
+            const cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const productIdStr = String(productId);
+            const productToRemove = cart.find(item => String(item.id) === productIdStr);
+            
+            if (productToRemove) {
+                showConfirmationModal(productToRemove);
+            } else {
+                showToast('⚠️ لم يتم العثور على المنتج', 'error');
+            }
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) {
+                removeCartItem(productId);
+                return;
+            }
+            
+            let cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const item = cart.find(item => String(item.id) === String(productId));
+            if (item && !isVariableWeightItem(item)) {
+                item.quantity = newQuantity;
+                localStorage.setItem('qoffaCart', JSON.stringify(cart));
+                updateCartCount();
+                updateCartSidebar();
+            }
+        }
+
+        function increaseQuantity(productId) {
+            let cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const item = cart.find(item => String(item.id) === String(productId));
+            if (item && !isVariableWeightItem(item)) {
+                item.quantity += 1;
+                localStorage.setItem('qoffaCart', JSON.stringify(cart));
+                updateCartCount();
+                updateCartSidebar();
+            }
+        }
+
+        function decreaseQuantity(productId) {
+            let cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const item = cart.find(item => String(item.id) === String(productId));
+            if (item && item.quantity > 1 && !isVariableWeightItem(item)) {
+                item.quantity -= 1;
+                localStorage.setItem('qoffaCart', JSON.stringify(cart));
+                updateCartCount();
+                updateCartSidebar();
+            } else if (item && item.quantity === 1) {
+                removeCartItem(productId);
+            }
+        }
+
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 تهيئة صفحة سياسة الإرجاع...');
+            
+            updateCartCount();
+            updateCartSidebar();
+            
+            // Modal buttons
+            document.getElementById('modalCancelBtn')?.addEventListener('click', cancelDelete);
+            document.getElementById('modalConfirmBtn')?.addEventListener('click', confirmProductDelete);
+            
+            // Close modal when clicking outside
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) cancelDelete();
+                });
+            }
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('mainHeader');
+                if (header) header.classList.toggle('scrolled', window.scrollY > 50);
+                
+                const backToTop = document.getElementById('backToTop');
+                if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 300);
+            });
+            
+            // Back to top button
+            document.getElementById('backToTop')?.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Mobile menu toggle
+            document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
+                document.getElementById('navMenu')?.classList.toggle('active');
+                document.getElementById('cartSidebar')?.classList.remove('active');
+            });
+            
+            // Cart sidebar toggle
+            document.getElementById('cartBtn')?.addEventListener('click', () => {
+                const sidebar = document.getElementById('cartSidebar');
+                if (sidebar) {
+                    sidebar.classList.toggle('active');
+                    if (sidebar.classList.contains('active')) {
+                        updateCartSidebar();
+                        document.getElementById('navMenu')?.classList.remove('active');
+                    }
+                }
+            });
+            
+            document.getElementById('cartClose')?.addEventListener('click', () => {
+                document.getElementById('cartSidebar')?.classList.remove('active');
+            });
+            
+            // Go to checkout
+            document.getElementById('cartCheckout')?.addEventListener('click', () => {
+                const cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+                if (cart.length === 0) {
+                    showToast('السلة فارغة! أضف بعض المنتجات أولاً', 'error');
+                    return;
+                }
+                const cartTotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+                if (cartTotal < 150) {
+                    showToast('الحد الأدنى للطلب هو 150 درهم', 'error');
+                    return;
+                }
+                window.location.href = 'order.html';
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('navMenu')?.classList.remove('active');
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Close cart when clicking outside
+            document.addEventListener('click', (e) => {
+                if (preventCartClose || window.preventCartClose) return;
+                const sidebar = document.getElementById('cartSidebar');
+                const cartBtn = document.getElementById('cartBtn');
+                const modalEl = document.getElementById('confirmationModal');
+                if (sidebar && sidebar.classList.contains('active')) {
+                    if (!sidebar.contains(e.target) && !cartBtn.contains(e.target) && !modalEl?.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+            
+            // Hide loader
+            const loader = document.getElementById('pageLoader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        // ==================== GLOBAL EXPORTS ====================
+        window.cancelDelete = cancelDelete;
+        window.confirmProductDelete = confirmProductDelete;
+        window.showConfirmationModal = showConfirmationModal;
+        window.removeCartItem = removeCartItem;
+        window.updateQuantity = updateQuantity;
+        window.increaseQuantity = increaseQuantity;
+        window.decreaseQuantity = decreaseQuantity;
+        window.showToast = showToast;
+        window.handleImageError = handleImageError;
+        window.isVariableWeightItem = isVariableWeightItem;
+        window.vwSyncWithBaserow = vwSyncWithBaserow;
+        window.vwReturnWeightToBaserow = vwReturnWeightToBaserow;
+        window.getOptimizedImage = getOptimizedImage;
+    </script>
+</body>
+</html>

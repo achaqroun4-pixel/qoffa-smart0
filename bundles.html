@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://api.mapbox.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.workers.dev https://api.mapbox.com https://events.mapbox.com;">
+<script src="assets/js/runtime-config.js"></script>
+<script src="assets/js/api-client.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bundles - Qoffa Smart</title>
+
+<link href="assets/css/brand-refresh.css" rel="stylesheet"/></head>
+<body>
+<div class="bundles-carousel-container">
+<div class="blackhole-carousel" id="bundlesCarousel">
+<div class="blackhole-scene" id="bundlesScene">
+<!-- Bundle 1 -->
+<div class="blackhole-slide-wrapper">
+<div class="blackhole-slide-image">
+<img alt="Panier Bio" src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=800&amp;h=600&amp;fit=crop"/>
+<span class="blackhole-badge">-20%</span>
+<div class="blackhole-content">
+<h2>Panier Bio</h2>
+<div class="subtitle">Fruits &amp; Légumes frais</div>
+<div class="price">120.00 درهم</div>
+</div>
+</div>
+<div class="blackhole-buttons-wrapper">
+<button class="blackhole-btn blackhole-btn-cart" onclick="alert('🛒 Ajouté au panier !')">🛒 Ajouter</button>
+<button class="blackhole-btn blackhole-btn-details" onclick="alert('📄 Détails du panier')">🔍 Détails</button>
+</div>
+</div>
+<!-- Bundle 2 -->
+<div class="blackhole-slide-wrapper">
+<div class="blackhole-slide-image">
+<img alt="Légumes Saison" src="https://images.unsplash.com/photo-1566385101042-7e0a24e38065?w=800&amp;h=600&amp;fit=crop"/>
+<div class="blackhole-content">
+<h2>Légumes Saison</h2>
+<div class="subtitle">8 variétés fraîches</div>
+<div class="price">85.00 درهم</div>
+</div>
+</div>
+<div class="blackhole-buttons-wrapper">
+<button class="blackhole-btn blackhole-btn-cart" onclick="alert('🛒 Ajouté au panier !')">🛒 Ajouter</button>
+<button class="blackhole-btn blackhole-btn-details" onclick="alert('📄 Détails du panier')">🔍 Détails</button>
+</div>
+</div>
+<!-- Bundle 3 -->
+<div class="blackhole-slide-wrapper">
+<div class="blackhole-slide-image">
+<img alt="Panier Mixte" src="https://images.unsplash.com/photo-1621523607647-800578fb6c2d?w=800&amp;h=600&amp;fit=crop"/>
+<div class="blackhole-content">
+<h2>Panier Mixte</h2>
+<div class="subtitle">Fruits + Légumes</div>
+<div class="price">150.00 درهم</div>
+</div>
+</div>
+<div class="blackhole-buttons-wrapper">
+<button class="blackhole-btn blackhole-btn-cart" onclick="alert('🛒 Ajouté au panier !')">🛒 Ajouter</button>
+<button class="blackhole-btn blackhole-btn-details" onclick="alert('📄 Détails du panier')">🔍 Détails</button>
+</div>
+</div>
+</div>
+<!-- Navigation Arrows -->
+<button class="blackhole-arrow blackhole-prev" onclick="blackholeMove(-1, 'bundlesScene', 'bundlesCarousel')">‹</button>
+<button class="blackhole-arrow blackhole-next" onclick="blackholeMove(1, 'bundlesScene', 'bundlesCarousel')">›</button>
+</div>
+</div>
+<script src="assets/js/bundles-carousel.js"></script>
+</body>
+</html>

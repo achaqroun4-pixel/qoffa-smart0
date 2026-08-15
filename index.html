@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://api.mapbox.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.workers.dev https://api.mapbox.com https://events.mapbox.com;">
+<script src="assets/js/runtime-config.js"></script>
+<script src="assets/js/api-client.js"></script>
+<link href="assets/css/header-premium-v1.css?v=1" rel="stylesheet"/>
+<link href="assets/css/header-product-search-v1.css?v=1" rel="stylesheet"/>
+<script defer src="assets/js/header-product-search-v1.js?v=1"></script>
+<link href="assets/css/loader-premium-v1.css?v=1" rel="stylesheet"/>
+<link href="assets/css/footer-premium-v1.css?v=floating-whatsapp-mobile-v5" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Qoffa Smart - توصيل المنتجات الطازجة مباشرة إلى منزلك</title>
+<!-- Favicon -->
+<link href="assets/images/logo.png" rel="icon" type="image/png"/>
+<link href="assets/images/logo.png" rel="apple-touch-icon"/>
+<!-- CSS Files -->
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Animate.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+<style>
+        /* Variable Weight Carousel Styles */
+        body.index-page .variable-weight-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        body.index-page .variable-weight-section .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        body.index-page .variable-weight-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 40px;
+        }
+
+        body.index-page .variable-weight-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 25px;
+            padding: 20px 10px;
+            scrollbar-width: thin;
+            scrollbar-color: #2E8B57 #e0e0e0;
+            flex: 1;
+        }
+
+        body.index-page .variable-weight-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        body.index-page .variable-weight-scroll::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        body.index-page .variable-weight-scroll::-webkit-scrollbar-thumb {
+            background: #2E8B57;
+            border-radius: 10px;
+        }
+
+        body.index-page .vw-card {
+            min-width: 280px;
+            width: 280px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        body.index-page .vw-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(46, 139, 87, 0.2);
+        }
+
+        body.index-page .vw-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        body.index-page .vw-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        body.index-page .vw-card:hover .vw-card-image img {
+            transform: scale(1.05);
+        }
+
+        /* Featured products square images */
+        .featured-products .product-card {
+            overflow: hidden;
+        }
+
+        .featured-products .product-image {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto !important;
+            aspect-ratio: 1 / 1;
+            min-height: 0;
+            max-height: none;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .featured-products .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        body.index-page .vw-stock-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: white;
+            color: #2E8B57;
+            z-index: 2;
+        }
+
+        body.index-page .vw-stock-badge.low {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        body.index-page .vw-stock-badge.out {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        body.index-page .vw-card-body {
+            padding: 20px;
+        }
+
+        body.index-page .vw-card-brand {
+            font-size: 0.7rem;
+            color: #2E8B57;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        body.index-page .vw-card-name-fr {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #212121;
+            margin-bottom: 4px;
+        }
+
+        body.index-page .vw-card-name-ar {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        body.index-page .vw-card-price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #2E8B57;
+            margin-bottom: 15px;
+        }
+
+        body.index-page .vw-card-price small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #888;
+        }
+
+        body.index-page .vw-dropdown-btn {
+            width: 100%;
+            padding: 10px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        body.index-page .vw-dropdown-btn:hover {
+            background: #e8f5e9;
+            border-color: #2E8B57;
+        }
+
+        body.index-page .vw-dropdown-btn.selected {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            border-color: transparent;
+        }
+
+        body.index-page .vw-add-cart-btn {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        body.index-page .vw-add-cart-btn.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        body.index-page .vw-add-cart-btn.enabled {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            cursor: pointer;
+            animation: pulseGreen 0.5s ease;
+        }
+
+        @keyframes pulseGreen {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body.index-page .vw-nav {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2E8B57;
+            font-size: 1.2rem;
+        }
+
+        body.index-page .vw-nav:hover {
+            background: #2E8B57;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Weight Popup Styles */
+        body.index-page .vw-weight-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10005;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        body.index-page .vw-weight-popup {
+            background: white;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            overflow: hidden;
+            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            direction: rtl;
+        }
+
+        body.index-page .vw-popup-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+        }
+
+        body.index-page .vw-popup-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        body.index-page .vw-popup-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        body.index-page .vw-popup-close:hover {
+            background: #e53935;
+            transform: rotate(90deg);
+        }
+
+        body.index-page .vw-popup-content {
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        body.index-page .vw-weight-option {
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        body.index-page .vw-weight-option:hover {
+            background: #e8f5e9;
+            transform: translateX(-5px);
+        }
+
+        body.index-page .vw-weight-option.selected {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+        }
+
+        body.index-page .vw-weight-stock {
+            font-size: 0.7rem;
+            color: #2E8B57;
+        }
+
+        body.index-page .vw-weight-option.selected .vw-weight-stock {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        body.index-page .vw-popup-footer {
+            display: flex;
+            gap: 12px;
+            padding: 16px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        body.index-page .vw-popup-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body.index-page .vw-popup-btn-cancel {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        body.index-page .vw-popup-btn-cancel:hover {
+            background: #e0e0e0;
+        }
+
+        body.index-page .vw-popup-btn-confirm {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+        }
+
+        body.index-page .vw-popup-btn-confirm:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        body.index-page .vw-popup-btn-confirm:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body.index-page .variable-weight-wrapper {
+                padding: 0 10px;
+            }
+
+            body.index-page .vw-card {
+                min-width: 260px;
+                width: 260px;
+            }
+
+            body.index-page .vw-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
+        body.index-page .vw-weight-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2E8B57;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .cart-item-weight-display {
+            font-size: 0.8rem;
+            color: #2E8B57;
+            margin-top: 5px;
+        }
+
+        .weight-value {
+            font-weight: 700;
+        }
+
+        .weight-qty {
+            font-size: 0.7rem;
+            color: #888;
+            margin-right: 5px;
+        }
+
+        /* ==================== BUNDLE DETAILS MODAL STYLES ==================== */
+        .bundle-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .bundle-modal-overlay.closing {
+            animation: fadeOut 0.25s ease forwards;
+        }
+
+        .bundle-modal {
+            background: white;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            direction: rtl;
+            position: relative;
+        }
+
+        .bundle-modal.closing {
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .bundle-modal-header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            z-index: 100;
+            background: white;
+            border-bottom: 1px solid #eee;
+            flex-shrink: 0;
+            order: -1;
+        }
+
+        .bundle-modal-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #212121;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: none;
+        }
+
+        .bundle-modal-close {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: #f5f5f5;
+            color: #666;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bundle-modal-close:hover {
+            background: #e53935;
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .bundle-modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: white;
+            touch-action: pinch-zoom;
+        }
+
+        .bundle-modal-body img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        .bundle-image-loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #eee;
+            border-top-color: #2E8B57;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .bundle-modal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            border-top: 1px solid #eee;
+            gap: 12px;
+            background: white;
+            flex-shrink: 0;
+            order: 3;
+        }
+
+        .bundle-price-display {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #2E8B57;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .btn-add-cart-modal {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn-add-cart-modal:hover {
+            background: linear-gradient(135deg, #1B5E20, #2E8B57);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px) scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(50px) scale(0.95);
+                opacity: 0;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ===== BANNER CAROUSEL ===== */
+        .banner-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 24px;
+            margin: 0 0 30px 0;
+            padding: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-carousel .container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .banner-slide {
+            display: none;
+            position: relative;
+            width: 100%;
+            animation: bannerFade 0.8s ease;
+        }
+
+        .banner-slide.active { display: block; }
+
+        @keyframes bannerFade { from { opacity: 0; transform: scale(1.02); } to { opacity: 1; transform: scale(1); } }
+
+        .banner-media { width: 100%; position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #f4f4f4; }
+
+        .banner-media img, .banner-media video, .banner-media iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border: 0; max-width: none; }
+
+        .banner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 20px; padding: 40px 60px; }
+
+        .banner-text { color: white; max-width: 500px; }
+        .banner-text h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; text-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .banner-text h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 5px; color: #FFD700; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .banner-text p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+
+        .banner-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; background: linear-gradient(135deg, #1a845c 0%, #3ab587 100%); color: white; border: none; border-radius: 999px; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.02em; cursor: pointer; transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; text-decoration: none; white-space: nowrap; box-shadow: 0 16px 30px rgba(0,0,0,0.22); }
+
+        .banner-btn:hover { transform: translateY(-2px) scale(1.02); background: linear-gradient(135deg, #11724d 0%, #2fa779 100%); box-shadow: 0 22px 45px rgba(0,0,0,0.24); }
+
+        .banner-cta { position: absolute; bottom: 32px; right: 24px; max-width: 180px; width: auto; z-index: 5; }
+
+        .banner-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 5; }
+        .banner-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; background: transparent; cursor: pointer; transition: all 0.3s ease; }
+        .banner-dot.active { background: white; transform: scale(1.2); }
+
+        @media (max-width: 768px) {
+            .banner-overlay { padding: 20px 30px; }
+            .banner-text h2 { font-size: 1.5rem; }
+            .banner-text h3 { font-size: 1rem; }
+            .banner-text p { font-size: 0.9rem; }
+            .banner-btn { padding: 10px 20px; font-size: 0.85rem; }
+            .banner-cta { bottom: 20px; right: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .banner-overlay { padding: 15px 20px; align-items: flex-start; justify-content: center; padding-bottom: 88px; }
+            .banner-text h2 { font-size: 1.2rem; }
+            .banner-text h3 { font-size: 0.9rem; }
+            .banner-text p { font-size: 0.8rem; display: none; }
+            .banner-btn { padding: 8px 14px; font-size: 0.75rem; }
+            .banner-cta { position: absolute; bottom: 20px; right: 16px; left: auto; max-width: 160px; width: auto; }
+        }
+    </style>
+<link href="assets/css/brand-refresh.css" rel="stylesheet"/><link href="assets/css/home-freshmart.css" rel="stylesheet"/><link href="assets/css/home-banner-brand-v2.css?v=6" rel="stylesheet"/><link href="assets/css/home-banner-text-panel-v3.css?v=3" rel="stylesheet"/><link href="assets/css/home-banner-premium-v9.css?v=10" rel="stylesheet"/><link href="assets/css/home-banner-assets-v12.css?v=5" rel="stylesheet"/><link href="assets/css/home-banner-mobile-v13.css?v=1" rel="stylesheet"/><link href="assets/css/home-banner-glass-v14.css?v=1" rel="stylesheet"/><link href="assets/css/variable-weight-home-premium.css?v=1" rel="stylesheet"/><link href="assets/css/bundle-modal-premium.css?v=4" rel="stylesheet"/><link href="assets/css/cta-premium.css?v=2" rel="stylesheet"/><link href="assets/css/highlights-grid-premium.css?v=1" rel="stylesheet"/><link href="assets/css/delivery-cities-premium.css?v=1" rel="stylesheet"/><link href="assets/css/ordering-steps-premium.css?v=1" rel="stylesheet"/><link href="assets/css/categories-square-premium.css?v=1" rel="stylesheet"/><link href="assets/css/why-us-premium.css?v=2" rel="stylesheet"/><link href="assets/css/final-cta-premium.css?v=1" rel="stylesheet"/><link href="assets/css/footer-premium-v1.css?v=1" rel="stylesheet"/><link href="assets/css/rtl-scroll-fix.css?v=1" rel="stylesheet"/><link href="assets/css/cart-freshmart.css?v=cart-order-unified-v1" rel="stylesheet"/></head>
+<body class="index-page">
+<header id="mainHeader">
+<div class="container">
+<nav class="navbar">
+<a class="logo" href="index.html">
+<img alt="Qoffa Smart" class="logo-img" src="assets/images/logo.png"/>
+<span class="logo-text">Qoffa Smart</span>
+</a>
+<ul class="nav-menu" id="navMenu">
+<li><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+<li><a class="nav-link" href="products.html"><i class="fas fa-store"></i> المنتجات</a></li>
+<li><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+<li><a class="nav-link" href="contact.html"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+	</ul>
+	<div class="nav-actions">
+	<div class="qoffa-header-search" data-qoffa-product-search>
+	<button aria-label="البحث عن منتج" class="qoffa-search-mobile-toggle" type="button"><i class="fas fa-search"></i></button>
+	<div class="qoffa-search-shell"><i class="fas fa-search"></i><input aria-label="البحث عن منتج" autocomplete="off" class="qoffa-product-search-input" placeholder="ابحث عن منتج..." type="search"/><button aria-label="مسح البحث" class="qoffa-search-clear" type="button"><i class="fas fa-times"></i></button></div>
+	<div aria-live="polite" class="qoffa-search-results" role="listbox"></div>
+	</div>
+	<button class="cart-btn" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+<button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+</div>
+</nav>
+</div>
+</header>
+<!-- ===== BANNER CAROUSEL (powered by Baserow) ===== -->
+<section class="banner-carousel" id="bannerCarousel">
+<div id="bannerSlides">
+<!-- banners will be injected here -->
+</div>
+<div class="banner-dots" id="bannerDots"></div>
+</section>
+<section class="highlights-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">عروضنا المتميزة</h2>
+<p class="section-subtitle">خدمة توصيل سريعة وآمنة</p>
+</div>
+<div class="highlights-grid">
+<div class="highlight-card animate__animated animate__slideInRight">
+<div class="highlight-icon"><i class="fas fa-truck"></i></div>
+<h3>توصيل مجاني للطلبات فوق 300 درهم</h3>
+<p>استمتع بتوصيل مجاني مباشرة إلى منزلك</p>
+</div>
+<div class="highlight-card animate__animated animate__slideInUp" style="animation-delay:0.2s">
+<div class="highlight-icon"><i class="fas fa-leaf"></i></div>
+<h3>منتجات عضوية طازجة يومياً</h3>
+<p>نختار أفضل المنتجات الطازجة كل يوم</p>
+</div>
+<div class="highlight-card animate__animated animate__slideInLeft" style="animation-delay:0.4s">
+<div class="highlight-icon"><i class="fas fa-clock"></i></div>
+<h3>تسليم في اليوم الموالي</h3>
+<p>نستقبل طلباتكم اليوم ونقوم بتسليمها في اليوم الموالي</p>
+</div>
+</div>
+</div>
+</section>
+<section class="delivery-section" id="delivery-areas">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">نوصل إلى أحيائك المختارة بالدار البيضاء</h2>
+<p class="section-subtitle">خدمة توصيل سريعة وآمنة</p>
+</div>
+<div class="delivery-cities">
+<div class="city-card animate__animated animate__fadeInUp"><i class="fas fa-map-marker-alt"></i>
+<h3>عين الشق</h3>
+</div>
+<div class="city-card animate__animated animate__fadeInUp animate__delay-1s"><i class="fas fa-map-marker-alt"></i>
+<h3>سيدي معروف</h3>
+</div>
+<div class="city-card animate__animated animate__fadeInUp animate__delay-2s"><i class="fas fa-map-marker-alt"></i>
+<h3>البرنوصي</h3>
+</div>
+<div class="city-card animate__animated animate__fadeInUp animate__delay-3s"><i class="fas fa-map-marker-alt"></i>
+<h3>سباتة</h3>
+</div>
+</div>
+<div class="delivery-info">
+<p><i class="fas fa-clock"></i> وقت العمل: يومياً من 8 صباحاً إلى 10 مساءً</p>
+<p><i class="fas fa-shipping-fast"></i> التوصيل مجاني للطلبات فوق 300 درهم</p>
+</div>
+</div>
+</section>
+<!-- Variable Weight Products Section -->
+<section class="variable-weight-section" id="variableWeightCarouselSection" style="display:none;">
+<div class="container">
+<h2 style="text-align:center;margin-bottom:0.5rem;color:#2E8B57;">⚖️ منتجات بأوزان متغيرة</h2>
+<p class="section-subtitle">اختر الوزن المناسب لاحتياجاتك - توفير مباشر على الكيلوغرام</p>
+<div class="variable-weight-wrapper">
+<button class="vw-nav vw-nav-prev" id="variableWeightPrev"><i class="fas fa-chevron-right"></i></button>
+<div class="variable-weight-scroll" id="variableWeightCards">
+<div class="vw-loading">جاري تحميل المنتجات...</div>
+</div>
+<button class="vw-nav vw-nav-next" id="variableWeightNext"><i class="fas fa-chevron-left"></i></button>
+</div>
+</div>
+</section>
+<section class="how-it-works" id="how-it-works">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">كيفية الطلب في 4 خطوات سهلة</h2>
+<p class="section-subtitle">بدون تسجيل مسبق، بدون تعقيد</p>
+</div>
+<div class="steps-container">
+<div class="step-card animate__animated animate__fadeInUp">
+<div class="step-number">1</div>
+<div class="step-icon"><i class="fas fa-shopping-basket"></i></div>
+<h3>اختر منتجاتك</h3>
+<p>تصفح فئاتنا وأضف ما يناسبك إلى السلة</p>
+</div>
+<div class="step-card animate__animated animate__fadeInUp animate__delay-1s">
+<div class="step-number">2</div>
+<div class="step-icon"><i class="fas fa-cart-plus"></i></div>
+<h3>أكمل طلبك</h3>
+<p>راجع سلة مشترياتك وأكمل المعلومات</p>
+</div>
+<div class="step-card animate__animated animate__fadeInUp animate__delay-2s">
+<div class="step-number">3</div>
+<div class="step-icon"><i class="fas fa-paper-plane"></i></div>
+<h3>إرسال الطلب</h3>
+<p>أرسل طلبك مباشرة عبر الرقم +212668-676565</p>
+</div>
+<div class="step-card animate__animated animate__fadeInUp animate__delay-3s">
+<div class="step-number">4</div>
+<div class="step-icon"><i class="fas fa-home"></i></div>
+<h3>استلم في منزلك</h3>
+<p>ستصل منتجاتك طازجة إلى باب منزلك</p>
+</div>
+</div>
+</div>
+</section>
+<section class="featured-products" id="featured-products">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">منتجاتنا المميزة</h2>
+<p class="section-subtitle">أفضل المنتجات الطازجة التي يفضلها عملاؤنا</p>
+</div>
+<div class="products-grid" id="productsGrid"></div>
+<div class="view-all"><a class="btn btn-primary" href="products.html"><i class="fas fa-store"></i> عرض جميع
+                    المنتجات</a></div>
+</div>
+</section>
+<section class="categories-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">تصفح حسب الفئة</h2>
+<p class="section-subtitle">اختَر ما تحتاجه من بين فئاتنا المتنوعة</p>
+</div>
+<div class="categories-grid">
+<a class="category-card animate__animated animate__fadeInUp" href="products.html?category=fruits">
+<div class="category-image"><img alt="فواكه" src="https://images.weserv.nl/?url=images.unsplash.com/photo-1610832958506-aa56368176cf&amp;w=300&amp;q=80&amp;output=webp"/></div>
+<div class="category-content"><i class="fas fa-apple-alt"></i>
+<h3>فواكه طازجة</h3><span class="category-link">تصفح الفواكه <i class="fas fa-arrow-left"></i></span>
+</div>
+</a>
+<a class="category-card animate__animated animate__fadeInUp animate__delay-1s" href="products.html?category=vegetables">
+<div class="category-image"><img alt="خضروات" src="https://images.weserv.nl/?url=images.unsplash.com/photo-1597362925123-77861d3fbac7&amp;w=300&amp;q=80&amp;output=webp"/></div>
+<div class="category-content"><i class="fas fa-carrot"></i>
+<h3>خضروات الموسم</h3><span class="category-link">تصفح الخضروات <i class="fas fa-arrow-left"></i></span>
+</div>
+</a>
+<a class="category-card animate__animated animate__fadeInUp animate__delay-2s" href="products.html?category=herbs">
+<div class="category-image"><img alt="أعشاب وسلطات" src="https://images.weserv.nl/?url=images.unsplash.com/photo-1546069901-ba9599a7e63c&amp;w=300&amp;q=80&amp;output=webp"/></div>
+<div class="category-content"><i class="fas fa-leaf"></i>
+<h3>أعشاب وسلطات</h3><span class="category-link">تصفح الأعشاب <i class="fas fa-arrow-left"></i></span>
+</div>
+</a>
+<a class="category-card animate__animated animate__fadeInUp animate__delay-3s" href="products.html?category=bundles">
+<div class="category-image"><img alt="باقات جاهزة" src="https://images.weserv.nl/?url=images.unsplash.com/photo-1556909114-f6e7ad7d3136&amp;w=300&amp;q=80&amp;output=webp"/></div>
+<div class="category-content"><i class="fas fa-gift"></i>
+<h3>باقات جاهزة</h3><span class="category-link">تصفح الباقات <i class="fas fa-arrow-left"></i></span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="why-us">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">لماذا تختار Qoffa Smart؟</h2>
+<p class="section-subtitle">نقدم لك تجربة تسوق فريدة ومميزة</p>
+</div>
+<div class="features-grid">
+<div class="feature-card animate__animated animate__fadeInUp">
+<div class="feature-icon"><i class="fas fa-leaf"></i></div>
+<h3>منتجات طازجة 100%</h3>
+<p>نختار لكم أفضل المنتجات مباشرة من المزارع المحلية</p>
+</div>
+<div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+<div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+<h3>توصيل سريع</h3>
+<p>طلباتكم تصل خلال ساعات معدودة</p>
+</div>
+<div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+<div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+<h3>أسعار مناسبة</h3>
+<p>نقدم أفضل الأسعار مع عروض وتخفيضات مستمرة</p>
+</div>
+<div class="feature-card animate__animated animate__fadeInUp animate__delay-3s">
+<div class="feature-icon"><i class="fas fa-headset"></i></div>
+<h3>دعم مباشر</h3>
+<p>فريق دعم متاح عبر واتساب</p>
+</div>
+<div class="feature-card animate__animated animate__fadeInUp">
+<div class="feature-icon"><i class="fas fa-user-check"></i></div>
+<h3>بدون تسجيل</h3>
+<p>اطلب بسهولة بدون الحاجة لإنشاء حساب مسبق</p>
+</div>
+<div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+<div class="feature-icon"><i class="fas fa-recycle"></i></div>
+<h3>تغليف صديق للبيئة</h3>
+<p>نستخدم مواد تغليف قابلة للتحلل</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<div class="cta-content">
+<h2>جاهز لطلب منتجاتك الطازجة؟</h2>
+<p>تواصل معنا مباشرة عبر واتساب وسنكون سعداء بخدمتك</p>
+<div class="cta-buttons">
+<a class="btn btn-whatsapp btn-large" href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
+<a class="btn btn-outline btn-large" href="tel:+212668676565"><i class="fas fa-phone-alt"></i> اتصل
+                        بنا الآن</a>
+</div>
+</div>
+</div>
+</section>
+<footer class="qoffa-premium-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<a class="footer-logo" href="index.html">
+<img alt="Qoffa Smart" src="assets/images/logo.png"/>
+<h3>Qoffa Smart</h3>
+</a>
+<p class="footer-description">
+                        منصة ذكية لتوصيل الخضر والفواكه الطازجة محليًا. نقدم حلًا مبتكرًا يجمع بين جودة المنتجات وتكنولوجيا التوصيل الحديثة لراحتك ورضاك.
+                    </p>
+<div class="social-links"><a aria-label="Instagram" class="social-link" data-platform="instagram" href="https://www.instagram.com/qoffasmart.ma" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a aria-label="Facebook" class="social-link" data-platform="facebook" href="https://www.facebook.com/profile.php?id=61591584153942" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a><a aria-label="WhatsApp" class="social-link" data-platform="whatsapp" href="https://wa.me/212668676565" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a><a aria-label="TikTok" class="social-link" data-platform="tiktok" href="https://www.tiktok.com/@qoffasmart.ma" rel="noopener noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a><a aria-label="LinkedIn" class="social-link" data-platform="linkedin" href="https://www.linkedin.com/company/qoffasmart/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+</div>
+<div class="footer-col">
+<h4>روابط سريعة</h4>
+<ul class="footer-links">
+<li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+<li><a href="products.html"><i class="fas fa-store"></i> جميع المنتجات</a></li>
+<li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+<li><a href="contact.html"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>فئات المنتجات</h4>
+<ul class="footer-links">
+<li><a href="products.html?category=fruits"><i class="fas fa-apple-alt"></i> فواكه طازجة</a></li>
+<li><a href="products.html?category=vegetables"><i class="fas fa-carrot"></i> خضروات الموسم</a></li>
+<li><a href="products.html?category=herbs"><i class="fas fa-leaf"></i> أعشاب وسلطات</a></li>
+<li><a href="products.html?category=bundles"><i class="fas fa-gift"></i> الباقات الجاهزة</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>معلومات التواصل</h4>
+<div class="contact-info">
+<div class="contact-item">
+<i class="fas fa-phone-alt"></i>
+<div>
+<a href="tel:+212668676565">+212668-676565</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fab fa-whatsapp"></i>
+<div>
+<a href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">واتساب</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<div>
+<a href="mailto:qoffasmart@gmail.com">qoffasmart@gmail.com</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-clock"></i>
+<div>يومياً: 8:00 صباحاً - 10:00 مساءً</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-map-marker-alt"></i>
+<div>الدار البيضاء، المملكة المغربية</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-policies">
+<a href="terms.html">الشروط والأحكام</a>
+<span>|</span>
+<a href="return-policy.html">سياسة الإرجاع</a>
+</div>
+<p>© 2025 Qoffa Smart. جميع الحقوق محفوظة.</p>
+</div>
+</div>
+</footer>
+<a class="whatsapp-float" href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+<a class="back-to-top" href="#" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+<div class="cart-header">
+<h2><i class="fas fa-shopping-cart"></i> سلة التسوق</h2>
+<div class="cart-header-actions"><button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button></div>
+</div>
+<div class="cart-items" id="cartItems">
+<div style="text-align:center;padding:40px;"><i class="fas fa-shopping-cart fa-3x" style="color:#ccc;margin-bottom:15px;display:block;"></i>
+<p style="color:#999;">السلة فارغة</p><a class="btn btn-primary" href="products.html">تصفح المنتجات</a>
+</div>
+</div>
+<div class="cart-footer">
+<div class="total-indicator" id="totalIndicator">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><span class="total-icon">💰</span><span class="total-text" id="sidebarTotalText">المجموع الإجمالي:
+                        0.00 درهم</span></div>
+<div class="min-order-msg" id="sidebarMinOrderMsg"><i class="fas fa-exclamation-triangle"></i> الحد
+                    الأدنى للطلب هو 150 درهم</div>
+</div>
+<div class="cart-total"><span>المجموع:</span><span id="cartTotalPrice">0.00 درهم</span></div>
+<button class="cart-checkout" id="cartCheckout">إتمام الطلب</button>
+</div>
+</div>
+<div class="toast-container" id="toastContainer"></div>
+<div class="loader" id="loader">
+<div class="loader-logo"><img alt="Qoffa Smart" src="assets/images/logo.png"/></div>
+<div class="loader-spinner"></div>
+<div class="loader-text">جاري التحميل...</div>
+</div>
+<!-- Confirmation Modal -->
+<div class="confirmation-modal" id="confirmationModal">
+<div class="confirmation-content">
+<div class="confirmation-icon"><i class="fas fa-trash-alt"></i></div>
+<h2 class="confirmation-title">حذف من السلة</h2>
+<p class="confirmation-message">هل أنت متأكد من حذف <span class="confirmation-product-name" id="confirmProductName">المنتج</span> من السلة؟</p>
+<div class="confirmation-actions">
+<button class="confirmation-btn confirmation-btn-cancel" onclick="cancelDelete()"><i class="fas fa-times"></i> إلغاء</button>
+<button class="confirmation-btn confirmation-btn-delete" onclick="confirmProductDelete()"><i class="fas fa-trash-alt"></i> حذف</button>
+</div>
+</div>
+</div>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Auto-unregister old service worker once to ensure fresh content -->
+<script>
+        (function(){
+            try {
+                if (!sessionStorage.getItem('sw_unregistered') && 'serviceWorker' in navigator) {
+                    navigator.serviceWorker.getRegistrations().then(regs => {
+                        let didUnregister = false;
+                        regs.forEach(reg => {
+                            try {
+                                if (reg && reg.active && reg.active.scriptURL && reg.active.scriptURL.indexOf('service-worker.js') !== -1) {
+                                    reg.unregister().then(success => {
+                                        if (success) {
+                                            console.log('Service worker unregistered by client script.');
+                                            sessionStorage.setItem('sw_unregistered','1');
+                                            if (!didUnregister) {
+                                                didUnregister = true;
+                                                // reload once to fetch fresh assets
+                                                setTimeout(() => location.reload(true), 500);
+                                            }
+                                        }
+                                    }).catch(e => console.warn('SW unregister error', e));
+                                }
+                            } catch(e) { console.warn(e); }
+                        });
+                    }).catch(e => console.warn('getRegistrations error', e));
+                }
+            } catch (e) { console.warn('sw cleanup failed', e); }
+        })();
+    </script>
+<script>
+        // ==================== CONFIGURATION ====================
+        const BASEROW_TOKEN = '';
+        const BASEROW_TABLE_ID = '882093';
+        const BASEROW_URL = `https://api.baserow.io/api/database/rows/table/${BASEROW_TABLE_ID}/?user_field_names=true&size=200`;
+
+        // ==================== IMAGE OPTIMIZATION ====================
+        function getOptimizedImage(url, options = {}) {
+            if (!url || url.includes('undefined') || url.includes('null')) return 'https://via.placeholder.com/300/2E8B57/ffffff?text=Qoffa';
+            if (url.includes('images.weserv.nl') || url.includes('assets/') || url.includes('placeholder')) return url;
+            const width = options.width || 300;
+            return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=${width}&q=80&output=webp&l=9`;
+        }
+
+        function handleImageError(img) {
+            const name = img.alt || 'Qoffa';
+            img.src = `https://via.placeholder.com/300/2E8B57/ffffff?text=${encodeURIComponent(name.substring(0, 10))}`;
+            img.onerror = null;
+        }
+
+        function getBaserowDisplayValue(value) {
+            if (value === null || value === undefined) return '';
+            if (typeof value === 'string') return value.trim();
+            if (typeof value === 'number') return String(value);
+            if (Array.isArray(value)) return getBaserowDisplayValue(value[0]);
+            if (typeof value === 'object') {
+                if (typeof value.value !== 'undefined') return getBaserowDisplayValue(value.value);
+                if (typeof value.name !== 'undefined') return getBaserowDisplayValue(value.name);
+                if (typeof value.label !== 'undefined') return getBaserowDisplayValue(value.label);
+            }
+            return '';
+        }
+
+        function getBaserowSingleSelectValue(value) {
+            const raw = getBaserowDisplayValue(value);
+            return raw.toLowerCase().trim();
+        }
+
+        // ==================== GLOBAL VARIABLES ====================
+        let allProducts = { fruits: [], vegetables: [], herbs: [], bundles: [] };
+        let cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+        let pendingDeleteId = null;
+        let pendingDeleteItem = null;
+        let preventCartClose = false;
+        let variableWeightState = { products: [], selectedWeights: {} };
+        const filterConfig = { fruits: [], vegetables: [], herbs: [], bundles: [] };
+        let activeFilters = { fruits: 'all', vegetables: 'all', herbs: 'all', bundles: 'all' };
+
+        // ==================== HELPERS ====================
+        function showLoader(show = true) {
+            const loader = document.getElementById('loader');
+            if (loader) loader.classList.toggle('active', show);
+        }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+            const existingToast = container.querySelector('.toast');
+            if (existingToast) existingToast.remove();
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `<span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        function isVariableWeightItem(item) {
+            return item && item.isVariableWeight === true;
+        }
+
+        // ==================== BASEROW SYNC ====================
+        function vwParseWeights(rawWeights) {
+            if (!rawWeights) return [];
+            if (typeof rawWeights === 'string') {
+                try {
+                    const parsed = JSON.parse(rawWeights);
+                    return Array.isArray(parsed) ? parsed.map(w => parseFloat(w)).filter(w => !isNaN(w) && w > 0) : [];
+                } catch (e) {
+                    return rawWeights.split(',').map(w => parseFloat(w.trim())).filter(w => !isNaN(w) && w > 0);
+                }
+            }
+            if (Array.isArray(rawWeights)) return rawWeights.map(w => parseFloat(w)).filter(w => !isNaN(w) && w > 0);
+            return [];
+        }
+
+        async function vwSyncWithBaserow(productId, weight, action) {
+            const label = action === 'remove' ? 'حجز' : 'إرجاع';
+            console.log(`🔄 بدء ${label} الوزن ${weight} للمنتج ${productId}`);
+            
+            try {
+                const fetchUrl = `https://api.baserow.io/api/database/rows/table/${BASEROW_TABLE_ID}/${productId}/?user_field_names=true`;
+                const response = await fetch(fetchUrl, { headers: { 'Authorization': `Token ${BASEROW_TOKEN}` } });
+                
+                if (!response.ok) {
+                    console.error(`❌ فشل جلب المنتج: ${response.status}`);
+                    return false;
+                }
+                
+                const row = await response.json();
+                let weights = vwParseWeights(row.available_weights);
+                const parsedWeight = parseFloat(weight);
+                
+                if (action === 'remove') {
+                    const idx = weights.findIndex(w => Math.abs(parseFloat(w) - parsedWeight) < 0.01);
+                    if (idx !== -1) {
+                        weights.splice(idx, 1);
+                        console.log(`✅ تم حجز الوزن ${parsedWeight}، الأوزان المتبقية:`, weights);
+                    } else {
+                        console.warn(`⚠️ الوزن ${parsedWeight} غير موجود`);
+                        return false;
+                    }
+                } else {
+                    weights.push(parsedWeight);
+                    weights.sort((a, b) => a - b);
+                    console.log(`✅ تم إرجاع الوزن ${parsedWeight}، الأوزان الجديدة:`, weights);
+                }
+                
+                const patchResponse = await fetch(fetchUrl, {
+                    method: 'PATCH',
+                    headers: { 'Authorization': `Token ${BASEROW_TOKEN}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ available_weights: JSON.stringify(weights) })
+                });
+                
+                if (!patchResponse.ok) {
+                    console.error(`❌ فشل تحديث Baserow: ${patchResponse.status}`);
+                    return false;
+                }
+                
+                console.log(`✅ تم ${label} الوزن بنجاح`);
+                return true;
+            } catch (error) {
+                console.error(`❌ خطأ في vwSyncWithBaserow:`, error);
+                return false;
+            }
+        }
+
+        async function vwReturnWeightToBaserow(item) {
+            if (!item?.isVariableWeight) return true;
+            if (!item.baseId || !item.weight) {
+                console.warn('⚠️ معلومات الوزن ناقصة:', item);
+                return true;
+            }
+            return await vwSyncWithBaserow(item.baseId, item.weight, 'add');
+        }
+
+        // ==================== CONFIRMATION MODAL ====================
+        function showConfirmationModal(productId, productName) {
+            console.log(`📋 عرض Modal للحذف: ${productName}, ID: ${productId}`);
+            pendingDeleteId = productId;
+            pendingDeleteItem = cart.find(i => String(i.id) === String(productId));
+            window.preventCartClose = true;
+            setTimeout(() => { window.preventCartClose = false; }, 1000);
+            document.getElementById('confirmProductName').textContent = productName || 'المنتج';
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.add('active');
+            }
+        }
+
+        function cancelDelete() {
+            console.log(`❌ إلغاء الحذف`);
+            pendingDeleteId = null;
+            pendingDeleteItem = null;
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+            }
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar) cartSidebar.classList.add('active');
+        }
+
+        async function confirmProductDelete() {
+            if (!pendingDeleteId) return;
+            
+            const deletedItem = pendingDeleteItem || cart.find(i => String(i.id) === String(pendingDeleteId));
+            const itemName = deletedItem?.name_fr || deletedItem?.name || 'المنتج';
+            
+            console.log(`🗑️ تأكيد حذف المنتج: ${itemName}`);
+            
+            // ✅ إذا كان منتج Variable Weight، نعيد الوزن إلى Baserow أولاً
+            if (deletedItem?.isVariableWeight) {
+                console.log(`🔄 إرجاع الوزن ${deletedItem.weight} للمنتج ${deletedItem.baseId}`);
+                showToast(`⏳ جاري إرجاع ${itemName} للمخزون...`, 'info');
+                
+                const returnResult = await vwReturnWeightToBaserow(deletedItem);
+                
+                if (!returnResult) {
+                    console.error(`❌ فشل إرجاع الوزن`);
+                    showToast(`⚠️ فشل إرجاع المنتج للمخزون، حاول مرة أخرى`, 'error');
+                    cancelDelete();
+                    return;
+                }
+                console.log(`✅ تم إرجاع الوزن بنجاح`);
+            }
+            
+            // حذف المنتج من السلة
+            cart = cart.filter(i => String(i.id) !== String(pendingDeleteId));
+            localStorage.setItem('qoffaCart', JSON.stringify(cart));
+            
+            // إغلاق الـ Modal
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+            }
+            
+            pendingDeleteId = null;
+            pendingDeleteItem = null;
+            
+            // تحديث الواجهة
+            updateCartCount();
+            updateCartSidebar();
+            
+            // إظهار السلة
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar) cartSidebar.classList.add('active');
+            
+            window.preventCartClose = true;
+            setTimeout(() => { window.preventCartClose = false; }, 1000);
+            
+            showToast(`✅ تم إزالة ${itemName} من السلة`, 'success');
+        }
+
+        // ==================== FETCH PRODUCTS ====================
+        async function fetchProducts() {
+            showLoader(true);
+            try {
+                console.log('🔄 جاري جلب المنتجات...');
+                const response = await fetch(BASEROW_URL, { headers: { 'Authorization': `Token ${BASEROW_TOKEN}` } });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                console.log(`✅ تم جلب ${data.results.length} منتج`);
+                
+                allProducts = { fruits: [], vegetables: [], herbs: [], bundles: [] };
+                const variableWeightProducts = [];
+                
+                data.results.forEach(product => {
+                    if (!product.name) return;
+                    
+                    const imageUrl = product.product_image?.[0]?.url || null;
+                    const bundleDetailsUrl = product.bundle_details?.[0]?.url || null;
+                    
+                    let subCategory = (product.sub_category || '').toLowerCase().trim();
+                    if (!subCategory) {
+                        const name = product.name.toLowerCase();
+                        const category = product.category?.toLowerCase() || '';
+                        if (category === 'fruits') subCategory = name.includes('مستورد') ? 'imported' : 'local';
+                        else if (category === 'vegetables') subCategory = name.includes('ورقي') ? 'leafy' : 'root';
+                        else if (category === 'herbs') subCategory = name.includes('سلطة') ? 'salads' : 'herbs';
+                        else if (category === 'bundles') subCategory = name.includes('هدية') ? 'gift' : 'daily';
+                        else subCategory = category || 'all';
+                    }
+                    
+                    const formattedProduct = {
+                        id: product.id,
+                        name: product.name || '',
+                        name_fr: product.name_fr || product.name || '',
+                        price: parseFloat(product.price) || 0,
+                        originalPrice: product.original_price ? parseFloat(product.original_price) : null,
+                        image: imageUrl ? getOptimizedImage(imageUrl, { width: 300 }) : 'https://via.placeholder.com/300/2E8B57/ffffff?text=Qoffa',
+                        imageOriginal: imageUrl,
+                        bundleDetailsImage: bundleDetailsUrl ? getOptimizedImage(bundleDetailsUrl, { width: 800 }) : null,
+                        category: product.category || '',
+                        sub_category: subCategory,
+                        unit: product.unit || product.Unit || ''
+                    };
+                    
+                    const category = product.category?.toLowerCase() || '';
+                    if (category === 'fruits') allProducts.fruits.push(formattedProduct);
+                    else if (category === 'vegetables') allProducts.vegetables.push(formattedProduct);
+                    else if (category === 'herbs') allProducts.herbs.push(formattedProduct);
+                    else if (category === 'bundles') allProducts.bundles.push(formattedProduct);
+                    
+                    if (product.is_variable_weight) {
+                        let weights = [];
+                        try {
+                            if (typeof product.available_weights === 'string') weights = JSON.parse(product.available_weights);
+                            else if (Array.isArray(product.available_weights)) weights = product.available_weights;
+                        } catch (e) { weights = []; }
+                        
+                        const vwProduct = {
+                            ...formattedProduct,
+                            weights: weights.filter(w => typeof w === 'number' && w > 0).sort((a, b) => a - b)
+                        };
+                        
+                        console.log(`🎡 Variable Weight Product:`, {
+                            name: vwProduct.name_fr,
+                            bundleDetailsImage: vwProduct.bundleDetailsImage?.substring(0, 50),
+                            category: vwProduct.category
+                        });
+                        
+                        variableWeightProducts.push(vwProduct);
+                    }
+                });
+                
+                console.log('📊 المنتجات:', { fruits: allProducts.fruits.length, vegetables: allProducts.vegetables.length, herbs: allProducts.herbs.length, bundles: allProducts.bundles.length, variableWeight: variableWeightProducts.length });
+                
+                buildFilterConfigFromData();
+                initializeFilters();
+                renderAllCategories();
+                renderFeaturedProducts();
+                updateCartCount();
+                updateCartSidebar();
+                
+                if (variableWeightProducts.length > 0) {
+                    setTimeout(() => {
+                        renderVariableWeightCarousel(variableWeightProducts);
+                        document.getElementById('variableWeightCarouselSection').style.display = 'block';
+                    }, 500);
+                }
+                
+            } catch (error) {
+                console.error('❌ خطأ:', error);
+                showToast('حدث خطأ في تحميل المنتجات', 'error');
+            } finally {
+                showLoader(false);
+            }
+        }
+
+        // ==================== VARIABLE WEIGHT FUNCTIONS ====================
+        function renderVariableWeightCarousel(products) {
+            variableWeightState.products = products;
+            const container = document.getElementById('variableWeightCards');
+            if (!container || products.length === 0) return;
+            
+            console.log('🎡 تحديث الكاروسيل، عدد المنتجات:', products.length);
+            
+            container.innerHTML = products.map(product => {
+                const weights = product.weights || [];
+                const stockCount = weights.length;
+                const stockClass = stockCount === 0 ? 'out' : stockCount <= 3 ? 'low' : '';
+                const isBundleProduct = product.category?.toLowerCase() === 'bundles' || product.bundleDetailsImage;
+                
+                console.log(`📦 ${product.name_fr}:`, {
+                    category: product.category,
+                    isBundleProduct,
+                    hasBundleImage: !!product.bundleDetailsImage,
+                    bundleImage: product.bundleDetailsImage?.substring(0, 50)
+                });
+                
+                return `
+                    <div class="vw-card" data-product-id="${product.id}">
+                        <div class="vw-card-image">
+                            <img src="${product.image}" alt="${product.name_fr}" loading="lazy" onerror="this.src='https://via.placeholder.com/240/2E8B57/ffffff?text=Product'">
+                            <span class="vw-stock-badge ${stockClass}">${stockCount} قطع</span>
+                        </div>
+                        <div class="vw-card-body">
+                            <div class="vw-card-brand">QOFFA SMART</div>
+                            <div class="vw-card-name-fr">${product.name_fr || ''}</div>
+                            <div class="vw-card-name-ar">${product.name || ''}</div>
+                            <div class="vw-card-price">${(product.price || 0).toFixed(2)} <small>درهم/${product.unit || 'كجم'}</small></div>
+                            <button class="vw-dropdown-btn" onclick="openWeightPopup(${product.id})">
+                                اختر الوزن <i class="fas fa-chevron-down"></i>
+                            </button>
+                            ${isBundleProduct && product.bundleDetailsImage ? `
+                                <button class="btn-bundle-details" onclick="event.stopPropagation(); openBundleDetails(${product.id})">
+                                    <i class="fas fa-search-plus"></i> 📋 تفاصيل القفة
+                                </button>
+                            ` : ``}
+                        </div>
+                    </div>`;
+            }).join('');
+            
+            setupVWCarouselControls();
+        }
+
+        function setupVWCarouselControls() {
+            const scroll = document.getElementById('variableWeightCards');
+            const prev = document.getElementById('variableWeightPrev');
+            const next = document.getElementById('variableWeightNext');
+            
+            if (prev) {
+                const newPrev = prev.cloneNode(true);
+                prev.parentNode.replaceChild(newPrev, prev);
+                newPrev.addEventListener('click', () => scroll?.scrollBy({ left: -280, behavior: 'smooth' }));
+            }
+            if (next) {
+                const newNext = next.cloneNode(true);
+                next.parentNode.replaceChild(newNext, next);
+                newNext.addEventListener('click', () => scroll?.scrollBy({ left: 280, behavior: 'smooth' }));
+            }
+        }
+
+        function openWeightPopup(productId) {
+            const product = variableWeightState.products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const weights = product.weights || [];
+            if (weights.length === 0) {
+                showToast('⚠️ لا توجد أوزان متاحة', 'warning');
+                return;
+            }
+            
+            document.getElementById('vwWeightPopupOverlay')?.remove();
+            
+            const overlay = document.createElement('div');
+            overlay.id = 'vwWeightPopupOverlay';
+            overlay.className = 'vw-weight-popup-overlay';
+            overlay.innerHTML = `
+                <div class="vw-weight-popup">
+                    <div class="vw-popup-header">
+                        <div class="vw-popup-title">اختر الوزن - ${product.name_fr}</div>
+                        <button class="vw-popup-close" onclick="closeWeightPopup()"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="vw-popup-content">
+                        ${weights.map(w => `
+                            <div class="vw-weight-option" onclick="selectPopupWeight(this, ${product.id}, ${w}, ${product.price})">
+                                ${w} ${product.unit || 'كجم'} - ${(w * product.price).toFixed(2)} درهم
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="vw-popup-footer">
+                        <button class="vw-popup-btn vw-popup-btn-cancel" onclick="closeWeightPopup()">إلغاء</button>
+                        <button class="vw-popup-btn vw-popup-btn-confirm" id="vwConfirmBtn" onclick="confirmWeightSelection(${product.id})" disabled>تأكيد</button>
+                    </div>
+                </div>`;
+            
+            document.body.appendChild(overlay);
+            overlay.addEventListener('click', (e) => { if (e.target === overlay) closeWeightPopup(); });
+        }
+
+        function selectPopupWeight(element, productId, weight, pricePerKg) {
+            variableWeightState.selectedWeights[productId] = { weight, pricePerKg, totalPrice: weight * pricePerKg };
+            document.querySelectorAll('.vw-weight-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            const confirmBtn = document.getElementById('vwConfirmBtn');
+            if (confirmBtn) confirmBtn.disabled = false;
+        }
+
+        async function confirmWeightSelection(productId) {
+            const selection = variableWeightState.selectedWeights[productId];
+            if (!selection) return;
+
+            // Mettre à jour la carte immédiatement, puis réserver et ajouter le poids choisi.
+            selectWeightOnCard(productId, selection.weight, selection.pricePerKg);
+            closeWeightPopup();
+
+            try {
+                await addVariableWeightToCart(productId);
+            } catch (error) {
+                console.error('Error adding variable weight to cart:', error);
+                showToast('⚠️ تعذر إضافة الوزن إلى السلة، يرجى المحاولة مرة أخرى', 'error');
+            }
+        }
+
+        function closeWeightPopup() {
+            const overlay = document.getElementById('vwWeightPopupOverlay');
+            if (overlay) overlay.remove();
+        }
+
+        function selectWeightOnCard(productId, weight, pricePerKg) {
+            const totalPrice = weight * pricePerKg;
+            const card = document.querySelector(`.vw-card[data-product-id="${productId}"]`);
+            if (!card) return;
+            
+            const dropdownBtn = card.querySelector('.vw-dropdown-btn');
+            const addBtn = card.querySelector('.vw-add-cart-btn');
+            
+            if (dropdownBtn) {
+                dropdownBtn.innerHTML = `${weight} كجم - ${totalPrice.toFixed(2)} درهم <i class="fas fa-chevron-down"></i>`;
+                dropdownBtn.classList.add('selected');
+            }
+            if (addBtn) {
+                addBtn.className = 'vw-add-cart-btn enabled';
+                addBtn.disabled = false;
+                addBtn.innerHTML = `<i class="fas fa-shopping-cart"></i> أضف ${weight} كجم (${totalPrice.toFixed(2)} درهم)`;
+            }
+        }
+
+        async function addVariableWeightToCart(productId) {
+            const selection = variableWeightState.selectedWeights[productId];
+            const product = variableWeightState.products.find(p => p.id === productId);
+            
+            if (!selection || !product) {
+                showToast('⚠️ الرجاء اختيار الوزن أولاً', 'warning');
+                return;
+            }
+            
+            // ✅ حجز الوزن من Baserow أولاً
+            showToast(`⏳ جاري حجز ${selection.weight}${product.unit || 'كجم'} - ${product.name_fr || product.name}...`, 'info');
+            const synced = await vwSyncWithBaserow(productId, selection.weight, 'remove');
+            
+            // La disponibilité distante est vérifiée en priorité, mais une réponse réseau
+            // ne doit jamais masquer l’ajout local demandé par l’utilisateur.
+            if (!synced) {
+                console.warn(`La réservation distante du poids ${selection.weight}${product.unit || 'كجم'} a échoué ; ajout local conservé.`);
+            }
+            
+            const cartItemId = `${productId}_${selection.weight}`;
+            const existing = cart.find(item => item.id === cartItemId);
+            
+            if (existing) {
+                existing.quantity = (existing.quantity || 1) + 1;
+                showToast(`➕ تم زيادة: ${product.name_fr} (${selection.weight}${product.unit})`, 'success');
+            } else {
+                cart.push({
+                    id: cartItemId,
+                    product_id: productId,
+                    baseId: productId,
+                    name: product.name,
+                    name_fr: product.name_fr,
+                    weight: selection.weight,
+                    price: selection.totalPrice,
+                    price_per_kg: selection.pricePerKg,
+                    unit: product.unit || 'كجم',
+                    image: product.image,
+                    quantity: 1,
+                    isVariableWeight: true,
+                    addedAt: Date.now()
+                });
+                showToast(`✅ تمت الإضافة: ${product.name_fr} - ⚖️ ${selection.weight}${product.unit}`, 'success');
+            }
+            
+            localStorage.setItem('qoffaCart', JSON.stringify(cart));
+            updateCartCount();
+            updateCartSidebar();
+            
+            // Retirer immédiatement le poids de la session visuelle, même si la synchronisation
+            // distante doit être réessayée : l’utilisateur ne peut ainsi pas réserver deux fois le même choix.
+            const weightIndex = product.weights.findIndex(w => Math.abs(parseFloat(w) - selection.weight) < 0.01);
+            if (weightIndex !== -1) product.weights.splice(weightIndex, 1);
+            
+            delete variableWeightState.selectedWeights[productId];
+            renderVariableWeightCarousel(variableWeightState.products);
+            
+            const sidebar = document.getElementById('cartSidebar');
+            if (sidebar) sidebar.classList.add('active');
+        }
+
+        // ==================== RENDER FUNCTIONS ====================
+        function renderProductCard(product) {
+            const discount = product.originalPrice ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) : 0;
+            const hasBundleDetails = product.category?.toLowerCase() === 'bundles';
+            
+            return `
+                <div class="product-card" style="cursor: pointer;">
+                    ${discount > 0 ? `<div class="discount-badge">-${discount}%</div>` : ''}
+                    <div class="product-image" onclick="window.location.href='product-detail.html?id=${product.id}'">
+                        <img src="${product.image}" alt="${product.name_fr}" loading="lazy" onerror="handleImageError(this)">
+                    </div>
+                    <div class="card-content">
+                        <div class="brand">Qoffa Smart</div>
+                        <div class="product-name">
+                            <div class="product-fr">${product.name_fr} <span class="unit-badge">${product.unit}</span></div>
+                            <div class="product-ar">${product.name}</div>
+                        </div>
+                        <div class="price">
+                            ${product.price.toFixed(2)} <span>درهم</span>
+                            ${product.originalPrice ? `<del>${product.originalPrice.toFixed(2)}</del>` : ''}
+                        </div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${product.id})">
+                            <i class="fas fa-shopping-cart"></i> أضف إلى السلة
+                        </button>
+                        ${hasBundleDetails ? `<button type="button" class="btn-bundle-details" onclick="event.stopPropagation(); openBundleDetails(${product.id})"><i class="fas fa-search-plus"></i> 📋 تفاصيل القفة</button>` : ''}
+                    </div>
+                </div>`;
+        }
+
+        function renderCategory(categoryName) {
+            const container = document.getElementById(`${categoryName}Products`);
+            if (!container) return;
+            let products = allProducts[categoryName] || [];
+            const activeFilter = activeFilters[categoryName];
+            if (activeFilter && activeFilter !== 'all') {
+                products = products.filter(p => (p.sub_category || 'all').toLowerCase().trim() === activeFilter.toLowerCase().trim());
+            }
+            container.innerHTML = products.length === 0 ? `<div class="no-products">لا توجد منتجات في هذا التصنيف</div>` : products.map(p => renderProductCard(p)).join('');
+        }
+
+        function renderAllCategories() {
+            renderCategory('fruits');
+            renderCategory('vegetables');
+            renderCategory('herbs');
+            if (typeof AOS !== 'undefined') AOS.refresh();
+        }
+
+        function renderFeaturedProducts() {
+            const container = document.getElementById('productsGrid');
+            if (!container) return;
+            
+            let featured = [];
+            if (allProducts.fruits?.length) featured.push(...allProducts.fruits.slice(0, 2));
+            if (allProducts.vegetables?.length) featured.push(...allProducts.vegetables.slice(0, 2));
+            if (allProducts.herbs?.length) featured.push(...allProducts.herbs.slice(0, 2));
+            if (allProducts.bundles?.length) featured.push(...allProducts.bundles.slice(0, 1));
+            
+            if (featured.length < 6) {
+                const all = [...allProducts.fruits, ...allProducts.vegetables, ...allProducts.herbs, ...allProducts.bundles];
+                featured = all.slice(0, 8);
+            }
+            
+            container.innerHTML = featured.length === 0 ? '<div class="no-products">جاري تحميل المنتجات...</div>' : featured.map(p => renderProductCard(p)).join('');
+        }
+
+        // ==================== FILTERS ====================
+        function buildFilterConfigFromData() {
+            filterConfig.fruits = ['all', ...new Set(allProducts.fruits.map(p => p.sub_category).filter(Boolean))];
+            filterConfig.vegetables = ['all', ...new Set(allProducts.vegetables.map(p => p.sub_category).filter(Boolean))];
+            filterConfig.herbs = ['all', ...new Set(allProducts.herbs.map(p => p.sub_category).filter(Boolean))];
+        }
+
+        function initializeFilters() {
+            const labels = { all: 'الكل', local: 'محلية', imported: 'مستوردة', leafy: 'ورقية', root: 'جذرية', fruit: 'ثمرية', herbs: 'أعشاب', salads: 'سلطات', aromatic: 'عطرية' };
+            Object.keys(filterConfig).forEach(cn => {
+                const fc = document.getElementById(`${cn}Filter`);
+                if (!fc) return;
+                fc.innerHTML = '';
+                filterConfig[cn].forEach(fv => {
+                    const btn = document.createElement('button');
+                    btn.className = `filter-btn ${fv === 'all' ? 'active' : ''}`;
+                    btn.dataset.filter = fv;
+                    btn.textContent = labels[fv] || fv;
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        fc.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        activeFilters[cn] = fv;
+                        renderCategory(cn);
+                    });
+                    fc.appendChild(btn);
+                });
+            });
+        }
+
+        // ==================== CART FUNCTIONS ====================
+        function updateCartCount() {
+            const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.querySelectorAll('.cart-count').forEach(el => el.textContent = count);
+            localStorage.setItem('qoffaCart', JSON.stringify(cart));
+            updateCartSidebar();
+        }
+
+        function addToCart(productId) {
+            const all = [...allProducts.fruits, ...allProducts.vegetables, ...allProducts.herbs, ...allProducts.bundles];
+            const product = all.find(p => p.id === productId);
+            if (!product) { showToast('لم يتم العثور على المنتج', 'error'); return; }
+            
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.quantity += 1;
+                showToast(`تم زيادة كمية ${product.name}`, 'success');
+            } else {
+                cart.push({ id: product.id, name: product.name, name_fr: product.name_fr, price: product.price, quantity: 1, unit: product.unit, image: product.image, imageOriginal: product.imageOriginal });
+                showToast(`✅ تم إضافة ${product.name} إلى السلة`, 'success');
+            }
+            updateCartCount();
+        }
+
+        function removeFromCart(productId) {
+            window.preventCartClose = true;
+            setTimeout(() => { window.preventCartClose = false; }, 1000);
+            const item = cart.find(i => String(i.id) === String(productId));
+            if (item) showConfirmationModal(productId, item.name_fr || item.name);
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) { removeFromCart(productId); return; }
+            const item = cart.find(item => item.id === productId);
+            if (item && !isVariableWeightItem(item)) {
+                item.quantity = newQuantity;
+                updateCartCount();
+                updateCartSidebar();
+            }
+        }
+
+        function increaseQuantity(productId) {
+            const item = cart.find(item => String(item.id) === String(productId));
+            if (item && !isVariableWeightItem(item)) {
+                item.quantity += 1;
+                updateCartCount();
+                updateCartSidebar();
+            }
+        }
+
+        function decreaseQuantity(productId) {
+            const item = cart.find(item => String(item.id) === String(productId));
+            if (item && item.quantity > 1 && !isVariableWeightItem(item)) {
+                item.quantity -= 1;
+                updateCartCount();
+                updateCartSidebar();
+            } else if (item && item.quantity === 1) {
+                removeFromCart(productId);
+            }
+        }
+
+        function updateCartSidebar() {
+            cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+            const container = document.getElementById('cartItems');
+            const totalEl = document.getElementById('cartTotalPrice');
+            if (!container) return;
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<div class="cart-empty">السلة فارغة</div>';
+                if (totalEl) totalEl.textContent = '0.00 درهم';
+                return;
+            }
+            
+            let html = '';
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price * (item.quantity || 1);
+                const isVar = isVariableWeightItem(item);
+                html += `<div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img" onerror="this.src='https://via.placeholder.com/80'">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name || item.name_fr}${isVar ? ` <span class="vw-weight-badge">${item.weight}${item.unit || 'كجم'}</span>` : ''}</div>
+                        <div class="cart-item-price">${item.price.toFixed(2)} درهم</div>
+                        ${!isVar ? `<div class="cart-item-quantity-controls">
+                            <button class="qty-btn qty-minus" onclick="event.stopPropagation(); decreaseQuantity('${item.id}')"><i class="fas fa-minus"></i></button>
+                            <input type="number" class="qty-input" value="${item.quantity || 1}" onchange="updateQuantity('${item.id}',parseInt(this.value))" min="1" max="100">
+                            <span class="qty-unit">${item.unit || 'كيلو'}</span>
+                            <button class="qty-btn qty-plus" onclick="event.stopPropagation(); increaseQuantity('${item.id}')"><i class="fas fa-plus"></i></button>
+                        </div>` : `<div class="cart-item-weight-display">
+                            <span class="weight-value">${item.weight}${item.unit || 'كجم'}</span>
+                            ${item.quantity > 1 ? `<span class="weight-qty">× ${item.quantity}</span>` : ''}
+                        </div>`}
+                    </div>
+                    <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">🗑️</button>
+                </div>`;
+            });
+            container.innerHTML = html;
+            if (totalEl) totalEl.textContent = total.toFixed(2) + ' درهم';
+            
+            const totalText = document.getElementById('sidebarTotalText');
+            if (totalText) totalText.textContent = `المجموع الإجمالي: ${total.toFixed(2)} درهم`;
+            
+            const checkoutBtn = document.getElementById('cartCheckout');
+            if (checkoutBtn) {
+                if (total >= 150) {
+                    checkoutBtn.disabled = false;
+                    checkoutBtn.style.opacity = '1';
+                    checkoutBtn.style.cursor = 'pointer';
+                } else {
+                    checkoutBtn.disabled = true;
+                    checkoutBtn.style.opacity = '0.5';
+                    checkoutBtn.style.cursor = 'not-allowed';
+                }
+            }
+            
+            const minOrderMsg = document.getElementById('sidebarMinOrderMsg');
+            if (minOrderMsg) minOrderMsg.style.display = total < 150 ? 'block' : 'none';
+        }
+
+        // ==================== BUNDLE DETAILS ====================
+        function openBundleDetails(productId) {
+            console.log('🎁 فتح تفاصيل القفة للمنتج:', productId);
+            
+            const all = [
+                ...(allProducts.fruits || []),
+                ...(allProducts.vegetables || []),
+                ...(allProducts.herbs || []),
+                ...(allProducts.bundles || [])
+            ];
+            
+            const normalizedId = String(productId);
+            const product = all.find(p => String(p.id) === normalizedId);
+            
+            console.log('المنتج المجد:', product);
+            
+            if (!product || !product.bundleDetailsImage) {
+                console.warn('لا توجد تفاصيل للمنتج:', productId);
+                showToast('لا توجد تفاصيل متاحة لهذا المنتج', 'error');
+                return;
+            }
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'bundle-modal-overlay';
+            overlay.id = 'bundleModalOverlay';
+            
+            const modal = document.createElement('div');
+            modal.className = 'bundle-modal';
+            modal.id = 'bundleModal';
+            
+            modal.innerHTML = `
+                <div class="bundle-modal-header">
+                    <h2 class="bundle-modal-title">🎁 ${product.name || product.name_fr}</h2>
+                    <button type="button" class="bundle-modal-close" onclick="closeBundleDetails()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="bundle-modal-body" id="bundleModalBody">
+                    <div class="bundle-image-loader" id="bundleImageLoader"></div>
+                </div>
+                <div class="bundle-modal-footer">
+                    <div class="bundle-price-display">
+                        <span>💰</span>
+                        <span>${(product.price || 0).toFixed(2)} درهم</span>
+                    </div>
+                    <button type="button" class="btn-add-cart-modal" onclick="event.stopPropagation(); addToCart(${product.id}); closeBundleDetails();">
+                        <i class="fas fa-shopping-cart"></i> أضف إلى السلة
+                    </button>
+                </div>
+            `;
+            
+            overlay.appendChild(modal);
+            document.body.appendChild(overlay);
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    console.log('إغلاق البقفة بـ click على الخلفية');
+                    closeBundleDetails();
+                }
+            });
+            
+            const img = new Image();
+            img.onload = function () {
+                const loader = document.getElementById('bundleImageLoader');
+                if (loader) loader.remove();
+                const body = document.getElementById('bundleModalBody');
+                if (body) {
+                    body.innerHTML = `<img src="${product.bundleDetailsImage}" alt="تفاصيل القفة" style="max-width:100%;height:auto;">`;
+                }
+            };
+            
+            img.onerror = function () {
+                const loader = document.getElementById('bundleImageLoader');
+                if (loader) loader.remove();
+                const body = document.getElementById('bundleModalBody');
+                if (body) {
+                    body.innerHTML = '<div style="color:#666;text-align:center;padding:40px;">❌ فشل تحميل الصورة</div>';
+                }
+            };
+            
+            img.src = product.bundleDetailsImage;
+            
+            console.log('✅ تم فتح البقفة بنجاح');
+        }
+
+        function closeBundleDetails() {
+            console.log('إغلاق البقفة');
+            const overlay = document.getElementById('bundleModalOverlay');
+            if (!overlay) return;
+            
+            const modal = overlay.querySelector('.bundle-modal');
+            if (modal) {
+                modal.classList.add('closing');
+                overlay.classList.add('closing');
+            }
+            
+            setTimeout(() => {
+                overlay.remove();
+                document.body.style.overflow = '';
+            }, 250);
+        }
+
+        window.openBundleDetails = openBundleDetails;
+        window.closeBundleDetails = closeBundleDetails;
+
+        // ==================== BANNER FUNCTIONS (Baserow) ====================
+        let banners = [];
+        let currentBannerIndex = 0;
+        let bannerInterval = null;
+
+        async function fetchBanners() {
+            try {
+                const BANNER_TABLE_ID = '1062179';
+                const url = `https://api.baserow.io/api/database/rows/table/${BANNER_TABLE_ID}/?user_field_names=true&size=200`;
+                console.log('🔍 Fetching banners from Baserow API:', url);
+                const response = await fetch(url, { headers: { 'Authorization': `Token ${BASEROW_TOKEN}` } });
+                if (!response.ok) {
+                    const text = await response.text();
+                    console.error('❌ fetchBanners: bad response', response.status, text);
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const data = await response.json();
+                const rows = Array.isArray(data) ? data : (data.results || []);
+                const targetPage = 'index.html';
+                banners = rows.map(row => {
+                    const pageValue = getBaserowSingleSelectValue(row.page || row.Page || row.page_name || row.Page_name || row.pageName || row.PageName || '');
+                    return {
+                        raw: row,
+                        page: pageValue,
+                        title: getBaserowDisplayValue(row.title || row.Title || row.name || row.Name || row.heading || row.Heading),
+                        subtitle: getBaserowDisplayValue(row.subtitle || row.Subtitle || row.sub_title),
+                        description: getBaserowDisplayValue(row.description || row.Description || row.body || row.text),
+                        button_text: getBaserowDisplayValue(row.button_text || row.Button_text || row.button || row.cta_text),
+                        button_link: getBaserowDisplayValue(row.button_link || row.Button_link || row.link || row.url),
+                        active: row.active === true || row.active === 'true' || row.active === 1 || row.Active === true || row.Active === 'true' || row.Active === 1,
+                        imageField: row.image || row.Image || row.images || row.Images || row.banner_image || row.banner || null,
+                        videoField: row.video || row.Video || row.video_url || row.Video_url || row.youtube || row.Youtube || row.embed || null,
+                        discoveredUrls: []
+                    };
+                }).filter(b => b.active === true && b.page === targetPage);
+
+                banners.forEach(b => {
+                    try {
+                        const row = b.raw || {};
+                        const values = Object.values(row);
+                        for (const v of values) {
+                            if (!v) continue;
+                            if (typeof v === 'object') {
+                                const cand = v.url || v.download_url || v.value || v[0] && v[0].url || null;
+                                if (cand && typeof cand === 'string') b.discoveredUrls.push(cand);
+                            } else if (typeof v === 'string') {
+                                b.discoveredUrls.push(v);
+                            }
+                        }
+                        if (!b.videoField) {
+                            const yt = b.discoveredUrls.find(s => typeof s === 'string' && /(?:youtube\.com|youtu\.be)/i.test(s));
+                            if (yt) b.videoField = yt;
+                        }
+                        if (!b.imageField) {
+                            const img = b.discoveredUrls.find(s => typeof s === 'string' && /https?:\/\/.+\.(jpg|jpeg|png|webp|gif)/i.test(s));
+                            if (img) b.imageField = img;
+                        }
+                    } catch (e) { console.warn('scan row urls error', e); }
+                });
+
+                console.log('🔎 fetchBanners: normalized banners', banners);
+
+                if (banners.length > 0) {
+                    renderBanners();
+                    startBannerAutoplay();
+                } else {
+                    console.log('ℹ️ No active banners found');
+                }
+            } catch (error) {
+                console.error('❌ Error fetching banners:', error);
+                showToast('حدث خطأ في تحميل البانرات', 'error');
+            }
+        }
+
+        function renderBanners() {
+            const container = document.getElementById('bannerSlides');
+            const dotsContainer = document.getElementById('bannerDots');
+            if (!container) return;
+            function isYouTubeUrl(u) { if (!u) return false; try { const s = String(u).toLowerCase(); return s.includes('youtube.com') || s.includes('youtu.be'); } catch (e) { return false; } }
+
+            // Put video banners first
+            const prepared = banners.map((banner) => {
+                let imageUrl = null;
+                const imgField = banner.imageField || banner.image || banner.Image || null;
+                let videoUrl = null;
+                const vidField = banner.videoField || banner.video || banner.Video || null;
+                if (imgField) {
+                    if (Array.isArray(imgField) && imgField.length > 0) imageUrl = imgField[0].url || imgField[0].download_url || imgField[0].value || null;
+                    else if (typeof imgField === 'object') imageUrl = imgField.url || imgField.download_url || imgField.value || null;
+                    else if (typeof imgField === 'string') imageUrl = imgField;
+                }
+                if (vidField) {
+                    if (Array.isArray(vidField) && vidField.length > 0) videoUrl = vidField[0].url || vidField[0].download_url || vidField[0].value || null;
+                    else if (typeof vidField === 'object') videoUrl = vidField.url || vidField.download_url || vidField.value || null;
+                    else if (typeof vidField === 'string') videoUrl = vidField;
+                }
+                const optimizedImage = imageUrl ? getOptimizedImage(imageUrl, { width: 1200 }) : '';
+                const displayImageSrc = (imageUrl && (imageUrl.startsWith('http') || imageUrl.startsWith('//'))) ? imageUrl : optimizedImage;
+                if (!videoUrl && isYouTubeUrl(displayImageSrc)) { videoUrl = displayImageSrc; imageUrl = null; }
+                return { banner, imageUrl, videoUrl, displayImageSrc, optimizedImage };
+            }).filter(b => b.imageUrl || b.videoUrl);
+
+            prepared.sort((a, b) => {
+                const av = a.videoUrl ? 0 : 1;
+                const bv = b.videoUrl ? 0 : 1;
+                return av - bv; // videos first
+            });
+
+            // Render slides from prepared list
+            container.innerHTML = prepared.map((item, index) => {
+                const banner = item.banner;
+                let imageUrl = null;
+                const videoUrl = item.videoUrl;
+                const optimizedImage = item.optimizedImage;
+                const displayImageSrc = item.displayImageSrc;
+                let mediaHtml = '';
+                if (videoUrl) {
+                    const v = String(videoUrl || '').trim();
+                    if (v.includes('youtube.com') || v.includes('youtu.be')) {
+                        let videoId = null;
+                        try {
+                            const ytMatch = v.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{6,})/);
+                            if (ytMatch && ytMatch[1]) videoId = ytMatch[1];
+                            if (!videoId) { const parts = v.split('/').filter(Boolean); videoId = parts[parts.length - 1]; }
+                        } catch (e) { console.warn('yt id parse error', e); }
+                        if (videoId) {
+                            const embed = `https://www.youtube.com/embed/${videoId}`;
+                            const params = `?rel=0&autoplay=1&mute=1&controls=1&loop=1&playlist=${videoId}`;
+                            mediaHtml = `<iframe src="${embed}${params}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay" allowfullscreen></iframe>`;
+                        } else {
+                            const link = v;
+                            mediaHtml = `<div class="banner-video-fallback"><a href="${link}" target="_blank" rel="noopener">تشغيل الفيديو على يوتيوب</a></div>`;
+                        }
+                    } else {
+                        mediaHtml = `<video src="${videoUrl}" playsinline muted loop autoplay preload="metadata"></video>`;
+                    }
+                } else if (optimizedImage) {
+                    mediaHtml = `<img src="${displayImageSrc}" alt="${banner.title || ''}" loading="lazy">`;
+                }
+
+                const ctaHtml = index === 0
+                    ? `<a href="products.html" class="banner-btn banner-cta">تسوق الآن</a>`
+                    : index === 1
+                        ? `<a href="products.html" class="banner-btn banner-cta">باقات متنوعة</a>`
+                        : index === 2
+                            ? `<a href="#featured-products" class="banner-btn banner-cta">منتجاتنا المميزة</a>`
+                            : '';
+                return `
+                    <div class="banner-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
+                        <div class="banner-media">${mediaHtml}</div>
+                        <div class="banner-overlay">${ctaHtml}</div>
+                    </div>
+                `;
+            }).join('');
+
+            if (dotsContainer) {
+                dotsContainer.innerHTML = prepared.map((_, index) => `
+                    <button class="banner-dot ${index === 0 ? 'active' : ''}" data-index="${index}" onclick="goToBanner(${index})"></button>
+                `).join('');
+            }
+        }
+
+        function goToBanner(index) {
+            if (index < 0 || index >= banners.length) return;
+            currentBannerIndex = index;
+            document.querySelectorAll('.banner-slide').forEach((slide, i) => { slide.classList.toggle('active', i === index); });
+            document.querySelectorAll('.banner-dot').forEach((dot, i) => { dot.classList.toggle('active', i === index); });
+        }
+
+        function startBannerAutoplay() {
+            if (bannerInterval) clearInterval(bannerInterval);
+            bannerInterval = setInterval(() => { const nextIndex = (currentBannerIndex + 1) % banners.length; goToBanner(nextIndex); }, 5000);
+        }
+
+        function stopBannerAutoplay() { if (bannerInterval) { clearInterval(bannerInterval); bannerInterval = null; } }
+
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchProducts();
+            // Load banners from Baserow
+            if (typeof fetchBanners === 'function') fetchBanners();
+            
+            window.addEventListener('scroll', () => {
+                document.getElementById('mainHeader')?.classList.toggle('scrolled', window.scrollY > 50);
+                document.getElementById('backToTop')?.classList.toggle('visible', window.scrollY > 300);
+            });
+            
+            document.getElementById('backToTop')?.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            // Pause banner autoplay on hover
+            const carousel = document.getElementById('bannerCarousel');
+            if (carousel) {
+                carousel.addEventListener('mouseenter', stopBannerAutoplay);
+                carousel.addEventListener('mouseleave', startBannerAutoplay);
+            }
+            document.getElementById('mobileMenuBtn')?.addEventListener('click', () => { document.getElementById('navMenu')?.classList.toggle('active'); document.getElementById('cartSidebar')?.classList.remove('active'); });
+            document.getElementById('cartBtn')?.addEventListener('click', () => { document.getElementById('cartSidebar')?.classList.toggle('active'); document.getElementById('navMenu')?.classList.remove('active'); if (document.getElementById('cartSidebar')?.classList.contains('active')) updateCartSidebar(); });
+            document.getElementById('cartClose')?.addEventListener('click', () => document.getElementById('cartSidebar')?.classList.remove('active'));
+            document.getElementById('cartCheckout')?.addEventListener('click', () => { if (cart.length === 0) { showToast('السلة فارغة!', 'error'); return; } window.location.href = 'order.html'; });
+            
+            document.addEventListener('click', (e) => {
+                if (window.preventCartClose) return;
+                const sidebar = document.getElementById('cartSidebar');
+                const cartBtn = document.getElementById('cartBtn');
+                const confirmModal = document.getElementById('confirmationModal');
+                if (sidebar?.classList.contains('active') && !sidebar.contains(e.target) && !cartBtn?.contains(e.target) && !confirmModal?.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                }
+            });
+            
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBundleDetails(); });
+            if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true });
+        });
+
+        // ==================== GLOBAL EXPORTS ====================
+        window.showToast = showToast;
+        window.updateCartSidebar = updateCartSidebar;
+        window.updateCartCount = updateCartCount;
+        window.cancelDelete = cancelDelete;
+        window.confirmProductDelete = confirmProductDelete;
+        window.showConfirmationModal = showConfirmationModal;
+        window.isVariableWeightItem = isVariableWeightItem;
+        window.openWeightPopup = openWeightPopup;
+        window.closeWeightPopup = closeWeightPopup;
+        window.addVariableWeightToCart = addVariableWeightToCart;
+        window.addToCart = addToCart;
+        window.removeFromCart = removeFromCart;
+        window.updateQuantity = updateQuantity;
+        window.increaseQuantity = increaseQuantity;
+        window.decreaseQuantity = decreaseQuantity;
+        window.openBundleDetails = openBundleDetails;
+        window.closeBundleDetails = closeBundleDetails;
+        window.handleImageError = handleImageError;
+        window.getOptimizedImage = getOptimizedImage;
+    </script>
+</body>
+</html>

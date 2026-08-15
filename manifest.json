@@ -1,0 +1,84 @@
+{
+  "name": "Qoffa Smart - توصيل الخضر والفواكه الطازجة",
+  "short_name": "Qoffa",
+  "description": "منصة ذكية لتوصيل الخضر والفواكه الطازجة والعضوية مباشرة إلى باب منزلك في الدار البيضاء",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2E8B57",
+  "background_color": "#ffffff",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["shopping", "food"],
+  "screenshots": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "تصفح المنتجات",
+      "short_name": "المنتجات",
+      "description": "تصفح جميع المنتجات المتاحة",
+      "url": "/products.html",
+      "icons": [
+        {
+          "src": "assets/images/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "الطلبات",
+      "short_name": "الطلبات",
+      "description": "عرض طلباتك",
+      "url": "/order.html",
+      "icons": [
+        {
+          "src": "assets/images/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

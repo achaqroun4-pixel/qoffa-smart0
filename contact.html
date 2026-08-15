@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://api.mapbox.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.workers.dev https://api.mapbox.com https://events.mapbox.com;">
+<script src="assets/js/runtime-config.js"></script>
+<script src="assets/js/api-client.js"></script>
+<link href="assets/css/header-premium-v1.css?v=1" rel="stylesheet"/>
+<link href="assets/css/loader-premium-v1.css?v=1" rel="stylesheet"/>
+<link href="assets/css/footer-premium-v1.css?v=floating-whatsapp-mobile-v5" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Qoffa Smart - اتصل بنا</title>
+<!-- Favicon -->
+<link href="assets/images/logo.png" rel="icon" type="image/png"/>
+<link href="assets/images/logo.png" rel="apple-touch-icon"/>
+<!-- CSS Files -->
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Animate.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+<!-- Mapbox GL JS -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet"/>
+<style>
+        /* ==================== Variable Weight Badge Styles ==================== */
+        .vw-weight-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2E8B57;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .cart-item-weight-display {
+            font-size: 0.8rem;
+            color: #2E8B57;
+            margin-top: 5px;
+        }
+        
+        .weight-value {
+            font-weight: 700;
+        }
+        
+        .weight-qty {
+            font-size: 0.7rem;
+            color: #888;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .confirmation-content {
+                padding: 25px 20px;
+                max-width: 380px;
+            }
+            
+            .confirmation-title {
+                font-size: 1.2rem;
+            }
+            
+            .confirmation-btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* ==================== LOADER STYLES ==================== */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            backdrop-filter: blur(3px);
+        }
+        
+        .loader.active {
+            display: flex;
+        }
+        
+        .loader-logo img {
+            width: 80px;
+            height: 80px;
+            animation: loaderPulse 1.5s ease infinite;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #2E8B57;
+            border-radius: 50%;
+            animation: loaderSpin 0.8s linear infinite;
+            margin-top: 20px;
+        }
+        
+        .loader-text {
+            margin-top: 15px;
+            color: #2E8B57;
+            font-weight: 600;
+        }
+        
+        @keyframes loaderSpin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        /* ==================== FORM STYLES ==================== */
+        .btn-submit {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 139, 87, 0.3);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #2E8B57;
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-hint {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .map-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+        
+        #contactMap {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            direction: rtl;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            cursor: pointer;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .question-text {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #212121;
+        }
+        
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            background: #2E8B57;
+            color: white;
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f8f9fa;
+            padding: 0 20px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 15px 20px;
+        }
+        
+        .answer-text {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .method-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(46, 139, 87, 0.15);
+        }
+        
+        .method-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #2E8B57;
+        }
+        
+        .method-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #212121;
+        }
+        
+        .method-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .method-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2E8B57;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .method-button:hover {
+            background: #1B5E20;
+            transform: translateY(-2px);
+        }
+        
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<link href="assets/css/brand-refresh.css" rel="stylesheet"/><link href="assets/css/contact-freshmart.css" rel="stylesheet"/><link href="assets/css/contact-premium-v2.css?v=2" rel="stylesheet"/><link href="assets/css/contact-premium-v3.css?v=1" rel="stylesheet"/><link href="assets/css/footer-premium-v1.css?v=1" rel="stylesheet"/><link href="assets/css/rtl-scroll-fix.css?v=1" rel="stylesheet"/><link href="assets/css/cart-freshmart.css?v=cart-order-unified-v1" rel="stylesheet"/></head>
+<body class="contact-page">
+<!-- Header -->
+<header id="mainHeader">
+<div class="container">
+<nav class="navbar">
+<a class="logo" href="index.html">
+<img alt="Qoffa Smart" class="logo-img" src="assets/images/logo.png"/>
+<span class="logo-text">Qoffa Smart</span>
+</a>
+<ul class="nav-menu" id="navMenu">
+<li><a class="nav-link" href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+<li><a class="nav-link" href="products.html"><i class="fas fa-store"></i> المنتجات</a></li>
+<li><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+<li><a class="nav-link active" href="contact.html"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+</ul>
+<div class="nav-actions">
+<button class="cart-btn" id="cartBtn">
+<i class="fas fa-shopping-cart"></i>
+<span class="cart-count">0</span>
+</button>
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="contact-hero">
+<div class="container">
+<div class="hero-content">
+<h1 class="hero-title animate__animated animate__fadeInDown">تواصل معنا</h1>
+<p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                    نحن هنا لمساعدتك على مدار الساعة
+                </p>
+<p class="hero-description animate__animated animate__fadeIn animate__delay-2s">
+                    فريق Qoffa Smart متاح دائمًا للرد على استفساراتك، تلقي طلباتك، ومساعدتك في الحصول على أفضل المنتجات الطازجة. ثق بنا، نحن هنا من أجلك.
+                </p>
+</div>
+</div>
+</section>
+<!-- Contact Main Section -->
+<section class="contact-main">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">كيف يمكننا مساعدتك؟</h2>
+<p class="section-subtitle">اختر الطريقة المناسبة للتواصل معنا</p>
+</div>
+<div class="contact-grid">
+<!-- Contact Form -->
+<div class="contact-form-container animate__animated animate__fadeInLeft">
+<div class="form-header">
+<h3 class="form-title">أرسل رسالة</h3>
+<p class="form-description">
+                            املأ النموذج أدناه وسيتواصل معك فريقنا في أقرب وقت ممكن. نحن نضمن الرد خلال 24 ساعة.
+                        </p>
+</div>
+<form id="contactForm" novalidate="">
+<input id="submissionDate" name="Date de Soumission" type="hidden" value=""/>
+<div class="form-group">
+<label class="form-label" for="name">
+<i class="fas fa-user"></i> الاسم الكامل
+                            </label>
+<input class="form-control" id="name" name="Nom Complet" placeholder="أدخل اسمك الثلاثي" required="" type="text"/>
+<span class="form-hint">الرجاء إدخال الاسم الكامل كما في الوثائق الرسمية</span>
+</div>
+<div class="form-group">
+<label class="form-label" for="phone">
+<i class="fas fa-phone"></i> رقم الهاتف
+                            </label>
+<input class="form-control" id="phone" name="Téléphone" placeholder="مثال: 212668676565" required="" type="tel"/>
+<span class="form-hint">أدخل رقم هاتفك مع رمز الدولة بدون مسافات</span>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">
+<i class="fas fa-envelope"></i> البريد الإلكتروني
+                            </label>
+<input class="form-control" id="email" name="Email" placeholder="example@domain.com" type="email"/>
+<span class="form-hint">اختياري - للحصول على عروض حصرية</span>
+</div>
+<div class="form-group">
+<label class="form-label" for="subject">
+<i class="fas fa-tag"></i> موضوع الرسالة
+                            </label>
+<select class="form-control" id="subject" name="Sujet" required="">
+<option disabled="" selected="" value="">اختر موضوع الرسالة</option>
+<option value="طلب منتجات">طلب منتجات</option>
+<option value="دعم فني">دعم فني</option>
+<option value="شكوى">شكوى</option>
+<option value="اقتراح">اقتراح</option>
+<option value="شراكة">شراكة</option>
+<option value="أخرى">أخرى</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="message">
+<i class="fas fa-comment"></i> الرسالة
+                            </label>
+<textarea class="form-control" id="message" name="Message" placeholder="اكتب رسالتك هنا بتفصيل..." required="" rows="5"></textarea>
+<span class="form-hint">يرجى كتابة رسالتك بشكل مفصل وواضح</span>
+</div>
+<div class="form-group">
+<label class="form-label">
+<input checked="" id="newsletter" name="Newsletter" type="checkbox"/>
+<span>أرغب في تلقي العروض والتحديثات عبر البريد الإلكتروني</span>
+</label>
+</div>
+<button class="btn-submit" type="submit">
+<i class="fas fa-paper-plane"></i> إرسال الرسالة
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="map-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">موقعنا</h2>
+<p class="section-subtitle">تعرف على موقعنا ومواقع التوصيل</p>
+</div>
+<div class="map-container">
+<div id="contactMap"></div>
+<div class="map-overlay">
+<h3><i class="fas fa-map-marker-alt" style="color: #2E8B57;"></i> مقرنا الرئيسي</h3>
+<p><strong>العنوان:</strong> الدار البيضاء، المغرب</p>
+<p><strong>المنطقة:</strong> وسط المدينة</p>
+<p><strong>ساعات الاستقبال:</strong> 9:00 ص - 6:00 م</p>
+<p><strong>الهاتف:</strong> +212 668-676565</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Methods -->
+<section class="contact-methods">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">طرق التواصل المفضلة</h2>
+<p class="section-subtitle">اختر الطريقة الأكثر ملاءمة لك</p>
+</div>
+<div class="methods-grid">
+<div class="method-card animate__animated animate__fadeInUp">
+<div class="method-icon">
+<i class="fab fa-whatsapp"></i>
+</div>
+<h3 class="method-title">واتساب سريع</h3>
+<p class="method-description">
+                        أفضل طريقة للطلبات السريعة. أرسل رسالة وستصلك ردودنا فوراً مع تأكيد الطلب.
+                    </p>
+<a class="method-button" href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i> ابدأ المحادثة
+                    </a>
+</div>
+<div class="method-card animate__animated animate__fadeInUp animate__delay-1s">
+<div class="method-icon">
+<i class="fas fa-phone-volume"></i>
+</div>
+<h3 class="method-title">اتصال مباشر</h3>
+<p class="method-description">
+                        تحدث مع ممثل خدمة العملاء مباشرة. نحن نفضل هذه الطريقة للاستفسارات المعقدة.
+                    </p>
+<a class="method-button" href="tel:+212668676565">
+<i class="fas fa-phone-alt"></i> اتصل الآن
+                    </a>
+</div>
+<div class="method-card animate__animated animate__fadeInUp animate__delay-2s">
+<div class="method-icon">
+<i class="fas fa-envelope-open-text"></i>
+</div>
+<h3 class="method-title">بريد إلكتروني</h3>
+<p class="method-description">
+                        مثالي للاستفسارات التفصيلية والمستندات. نحن نضمن الرد خلال 24 ساعة عمل.
+                    </p>
+<a class="method-button" href="mailto:qoffasmart@gmail.com">
+<i class="fas fa-envelope"></i> أرسل بريدًا
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="faq-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">الأسئلة الشائعة</h2>
+<p class="section-subtitle">إجابات على أكثر الأسئلة تكراراً</p>
+</div>
+<div class="faq-container">
+<div class="faq-item">
+<div class="faq-question">
+<span class="question-text">ما هي ساعات عمل خدمة التوصيل؟</span>
+<div class="faq-icon">
+<i class="fas fa-plus"></i>
+</div>
+</div>
+<div class="faq-answer">
+<p class="answer-text">
+                            نجمع الطلبات اليوم ويتم التوصيل في اليوم الموالي بعد تجميع الطلبات. يمكنك تقديم الطلبات على مدار الساعة عبر الموقع أو واتساب.
+                        </p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span class="question-text">كم تستغرق وقت التوصيل؟</span>
+<div class="faq-icon">
+<i class="fas fa-plus"></i>
+</div>
+</div>
+<div class="faq-answer">
+<p class="answer-text">
+                            متوسط وقت التوصيل هو 2-4 ساعات داخل المدينة.
+                        </p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span class="question-text">هل هناك حد أدنى للطلب؟</span>
+<div class="faq-icon">
+<i class="fas fa-plus"></i>
+</div>
+</div>
+<div class="faq-answer">
+<p class="answer-text">
+                            نعم، الحد الأدنى للطلب هو 150 درهم للحصول على خدمة التوصيل. للطلبات الأقل من هذا المبلغ، يمكنك الاستفادة من خدمة الاستلام من أقرب نقطة توزيع.
+                        </p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span class="question-text">ماذا لو لم أكن راضياً عن المنتج؟</span>
+<div class="faq-icon">
+<i class="fas fa-plus"></i>
+</div>
+</div>
+<div class="faq-answer">
+<p class="answer-text">
+                            نحن نضمن رضاك التام عن منتجاتنا. إذا لم تكن راضياً عن أي منتج، يمكنك إرجاعه خلال 24 ساعة واستبداله أو استرداد قيمته.
+                        </p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span class="question-text">هل تقدمون عروضاً للكميات الكبيرة؟</span>
+<div class="faq-icon">
+<i class="fas fa-plus"></i>
+</div>
+</div>
+<div class="faq-answer">
+<p class="answer-text">
+                            نعم، لدينا عروض خاصة للفنادق، المطاعم، والمؤسسات. اتصل بفريق المبيعات على الرقم +212 668-676565 للحصول على عرض سعر خاص.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="contact-cta">
+<div class="container">
+<h2 class="cta-title">هل تحتاج إلى مساعدة فورية؟</h2>
+<p class="cta-description">
+                فريق دعم Qoffa Smart متاح على مدار الساعة لمساعدتك في أي استفسار أو طلب. لا تتردد في التواصل معنا بأي طريقة تناسبك.
+            </p>
+<div class="cta-buttons">
+<a class="btn btn-primary" href="tel:+212668676565">
+<i class="fas fa-phone-alt"></i> اتصل الآن
+                </a>
+<a class="btn btn-whatsapp" href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i> واتساب مباشر
+                </a>
+<a class="btn btn-outline" href="products.html">
+<i class="fas fa-store"></i> تصفح المنتجات
+                </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="qoffa-premium-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<a class="footer-logo" href="index.html">
+<img alt="Qoffa Smart" src="assets/images/logo.png"/>
+<h3>Qoffa Smart</h3>
+</a>
+<p class="footer-description">
+                        منصة ذكية لتوصيل الخضر والفواكه الطازجة محليًا. نقدم حلًا مبتكرًا يجمع بين جودة المنتجات وتكنولوجيا التوصيل الحديثة لراحتك ورضاك.
+                    </p>
+<div class="social-links"><a aria-label="Instagram" class="social-link" data-platform="instagram" href="https://www.instagram.com/qoffasmart.ma" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a aria-label="Facebook" class="social-link" data-platform="facebook" href="https://www.facebook.com/profile.php?id=61591584153942" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a><a aria-label="WhatsApp" class="social-link" data-platform="whatsapp" href="https://wa.me/212668676565" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a><a aria-label="TikTok" class="social-link" data-platform="tiktok" href="https://www.tiktok.com/@qoffasmart.ma" rel="noopener noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a><a aria-label="LinkedIn" class="social-link" data-platform="linkedin" href="https://www.linkedin.com/company/qoffasmart/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+</div>
+<div class="footer-col">
+<h4>روابط سريعة</h4>
+<ul class="footer-links">
+<li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+<li><a href="products.html"><i class="fas fa-store"></i> جميع المنتجات</a></li>
+<li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+<li><a href="contact.html"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>فئات المنتجات</h4>
+<ul class="footer-links">
+<li><a href="products.html?category=fruits"><i class="fas fa-apple-alt"></i> فواكه طازجة</a></li>
+<li><a href="products.html?category=vegetables"><i class="fas fa-carrot"></i> خضروات الموسم</a></li>
+<li><a href="products.html?category=herbs"><i class="fas fa-leaf"></i> أعشاب وسلطات</a></li>
+<li><a href="products.html?category=bundles"><i class="fas fa-gift"></i> الباقات الجاهزة</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>معلومات التواصل</h4>
+<div class="contact-info">
+<div class="contact-item">
+<i class="fas fa-phone-alt"></i>
+<div>
+<a href="tel:+212668676565">+212668-676565</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fab fa-whatsapp"></i>
+<div>
+<a href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">واتساب</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<div>
+<a href="mailto:qoffasmart@gmail.com">qoffasmart@gmail.com</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-clock"></i>
+<div>يومياً: 8:00 صباحاً - 10:00 مساءً</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-map-marker-alt"></i>
+<div>الدار البيضاء، المملكة المغربية</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-policies">
+<a href="terms.html">الشروط والأحكام</a>
+<span>|</span>
+<a href="return-policy.html">سياسة الإرجاع</a>
+</div>
+<p>© 2025 Qoffa Smart. جميع الحقوق محفوظة.</p>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Float -->
+<a class="whatsapp-float" href="https://wa.me/212668676565" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i>
+</a>
+<!-- Back to Top -->
+<a class="back-to-top" href="#" id="backToTop">
+<i class="fas fa-chevron-up"></i>
+</a>
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+<div class="cart-header">
+<h2><i class="fas fa-shopping-cart"></i> سلة التسوق</h2>
+<div class="cart-header-actions">
+<button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+</div>
+</div>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-footer">
+<div class="total-indicator" id="totalIndicator">
+<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+<span class="total-icon">💰</span>
+<span class="total-text" id="sidebarTotalText">المجموع الإجمالي: 0.00 درهم</span>
+</div>
+<div class="min-order-msg" id="sidebarMinOrderMsg">الحد الأدنى للطلب هو 150 درهم</div>
+</div>
+<div class="cart-total"><span>المجموع:</span><span id="cartTotalPrice">0.00 درهم</span></div>
+<button class="cart-checkout" id="cartCheckout">إتمام الطلب</button>
+</div>
+</div>
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+<!-- Loader -->
+<div class="loader" id="loader">
+<div class="loader-logo"><img alt="Qoffa Smart" src="assets/images/logo.png"/></div>
+<div class="loader-spinner"></div>
+<div class="loader-text">جاري التحميل...</div>
+</div>
+<!-- Confirmation Modal -->
+<div class="confirmation-modal" id="confirmationModal">
+<div class="confirmation-content">
+<div class="confirmation-icon"><i class="fas fa-trash-alt"></i></div>
+<h2 class="confirmation-title">حذف من السلة</h2>
+<p class="confirmation-message">هل أنت متأكد من حذف <span class="confirmation-product-name" id="confirmProductName">المنتج</span> من السلة؟</p>
+<div class="confirmation-actions">
+<button class="confirmation-btn confirmation-btn-cancel" id="modalCancelBtn"><i class="fas fa-times"></i> إلغاء</button>
+<button class="confirmation-btn confirmation-btn-delete" id="modalConfirmBtn"><i class="fas fa-trash-alt"></i> حذف</button>
+</div>
+</div>
+</div>
+<script>
+        // ==================== CONFIGURATION ====================
+        const BASEROW_TOKEN = '';
+        const BASEROW_TABLE_ID = '882093';
+        const BASEROW_URL = `https://api.baserow.io/api/database/rows/table/${BASEROW_TABLE_ID}/?user_field_names=true&size=200`;
+
+        // ==================== GLOBAL VARIABLES ====================
+        let cart = JSON.parse(localStorage.getItem('qoffaCart')) || [];
+        let pendingDeleteItem = null;
+        let preventCartClose = false;
+        let preventCartCloseTimer = null;
+
+        // ==================== HELPER FUNCTIONS ====================
+        function showLoader(show) {
+            const loader = document.getElementById('loader');
+            if (loader) loader.classList.toggle('active', show);
+        }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+            
+            document.querySelectorAll('.toast').forEach(t => t.remove());
+            
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : type === 'warning' ? 'fa-exclamation-triangle' : 'fa-info-circle'}"></i><span>${message}</span>`;
+            container.appendChild(toast);
+            
+            setTimeout(() => {
+                if (toast && toast.remove) toast.remove();
+            }, 3500);
+        }
+
+        function handleImageError(img) {
+            img.src = 'https://via.placeholder.com/80/2E8B57/ffffff?text=Qoffa';
+            img.onerror = null;
+        }
+
+        function isVariableWeightItem(item) {
+            return item && item.isVariableWeight === true;
+        }
+
+        // ==================== BASEROW SYNC ====================
+        function vwParseWeights(rawWeights) {
+            if (!rawWeights) return [];
+            if (typeof rawWeights === 'string') {
+                try {
+                    const parsed = JSON.parse(rawWeights);
+                    return Array.isArray(parsed) ? parsed.map(w => parseFloat(w)).filter(w => !isNaN(w) && w > 0) : [];
+                } catch (e) {
+                    return rawWeights.split(',').map(w => parseFloat(w.trim())).filter(w => !isNaN(w) && w > 0);
+                }
+            }
+            if (Array.isArray(rawWeights)) return rawWeights.map(w => parseFloat(w)).filter(w => !isNaN(w) && w > 0);
+            return [];
+        }
+
+        async function vwSyncWithBaserow(productId, weight, action) {
+            const label = action === 'remove' ? 'حجز' : 'إرجاع';
+            console.log(`🔄 ${label} الوزن ${weight} للمنتج ${productId}`);
+            
+            try {
+                const fetchUrl = `https://api.baserow.io/api/database/rows/table/${BASEROW_TABLE_ID}/${productId}/?user_field_names=true`;
+                const response = await fetch(fetchUrl, { 
+                    headers: { 'Authorization': `Token ${BASEROW_TOKEN}` } 
+                });
+                
+                if (!response.ok) return false;
+                
+                const row = await response.json();
+                let weights = vwParseWeights(row.available_weights);
+                const parsedWeight = parseFloat(weight);
+                
+                if (action === 'remove') {
+                    const idx = weights.findIndex(w => Math.abs(parseFloat(w) - parsedWeight) < 0.01);
+                    if (idx !== -1) weights.splice(idx, 1);
+                    else return false;
+                } else {
+                    weights.push(parsedWeight);
+                    weights.sort((a, b) => a - b);
+                }
+                
+                const patchResponse = await fetch(fetchUrl, {
+                    method: 'PATCH',
+                    headers: { 
+                        'Authorization': `Token ${BASEROW_TOKEN}`, 
+                        'Content-Type': 'application/json' 
+                    },
+                    body: JSON.stringify({ available_weights: JSON.stringify(weights) })
+                });
+                
+                return patchResponse.ok;
+            } catch (error) {
+                console.error('❌ Baserow error:', error);
+                return false;
+            }
+        }
+
+        async function vwReturnWeightToBaserow(item) {
+            if (!item?.isVariableWeight) return true;
+            if (!item.baseId || !item.weight) return true;
+            return await vwSyncWithBaserow(item.baseId, item.weight, 'add');
+        }
+
+        // ==================== CONFIRMATION MODAL ====================
+        function showConfirmationModal(item) {
+            console.log('📋 عرض Modal للحذف:', item);
+            pendingDeleteItem = item;
+            
+            const confirmProductName = document.getElementById('confirmProductName');
+            if (confirmProductName) {
+                const displayName = item.name_fr || item.name || 'المنتج';
+                const weightInfo = item.isVariableWeight ? ` (${item.weight}${item.unit || 'كجم'})` : '';
+                confirmProductName.textContent = displayName + weightInfo;
+            }
+            
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function cancelDelete() {
+            console.log('❌ إلغاء الحذف');
+            pendingDeleteItem = null;
+            
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar) cartSidebar.classList.add('active');
+        }
+
+        async function confirmProductDelete() {
+            if (!pendingDeleteItem) {
+                console.warn('⚠️ no pendingDeleteItem');
+                return;
+            }
+            
+            const itemToDelete = pendingDeleteItem;
+            const itemName = itemToDelete.name_fr || itemToDelete.name || 'المنتج';
+            
+            console.log(`🗑️ تأكيد حذف المنتج: ${itemName}`);
+            
+            // ✅ إذا كان منتج Variable Weight، نعيد الوزن إلى Baserow أولاً
+            if (itemToDelete.isVariableWeight) {
+                console.log(`🔄 إرجاع الوزن ${itemToDelete.weight} للمنتج ${itemToDelete.baseId}`);
+                showToast(`⏳ جاري إرجاع ${itemName} للمخزون...`, 'info');
+                
+                const returnResult = await vwReturnWeightToBaserow(itemToDelete);
+                
+                if (!returnResult) {
+                    console.error(`❌ فشل إرجاع الوزن`);
+                    showToast(`⚠️ فشل إرجاع المنتج للمخزون، حاول مرة أخرى`, 'error');
+                    cancelDelete();
+                    return;
+                }
+                console.log(`✅ تم إرجاع الوزن بنجاح`);
+                showToast(`✅ تم إرجاع ${itemName} للمخزون`, 'success');
+            }
+            
+            // حذف المنتج من السلة
+            const itemId = itemToDelete.id;
+            cart = cart.filter(item => item.id !== itemId);
+            saveCart();
+            updateCartSidebar();
+            
+            // إغلاق الـ Modal
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            pendingDeleteItem = null;
+            
+            // إظهار السلة ومنع الإغلاق المؤقت
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar) cartSidebar.classList.add('active');
+            
+            preventCartClose = true;
+            if (preventCartCloseTimer) clearTimeout(preventCartCloseTimer);
+            preventCartCloseTimer = setTimeout(() => { preventCartClose = false; }, 500);
+            
+            showToast(`✅ تم إزالة ${itemName} من السلة`, 'success');
+        }
+
+        // ==================== CART FUNCTIONS ====================
+        function updateCartCount() {
+            const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.querySelectorAll('.cart-count').forEach(el => el.textContent = count);
+            localStorage.setItem('qoffaCart', JSON.stringify(cart));
+        }
+
+        function saveCart() {
+            localStorage.setItem('qoffaCart', JSON.stringify(cart));
+            updateCartCount();
+            updateCartSidebar();
+        }
+
+        function removeFromCart(itemOrId) {
+            let itemToRemove;
+            
+            if (typeof itemOrId === 'number' || typeof itemOrId === 'string') {
+                const idStr = String(itemOrId);
+                itemToRemove = cart.find(item => String(item.id) === idStr);
+            } else {
+                itemToRemove = itemOrId;
+            }
+            
+            if (itemToRemove) {
+                console.log('🗑️ removeFromCart - المنتج:', itemToRemove);
+                showConfirmationModal(itemToRemove);
+            } else {
+                console.warn('⚠️ produit non trouvé:', itemOrId);
+                const altItem = cart.find(item => String(item.product_id) === String(itemOrId));
+                if (altItem) {
+                    showConfirmationModal(altItem);
+                } else {
+                    showToast('⚠️ لم يتم العثور على المنتج', 'error');
+                }
+            }
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) {
+                removeFromCart(productId);
+                return;
+            }
+            
+            const item = cart.find(item => item.id === productId);
+            if (item && !isVariableWeightItem(item)) {
+                item.quantity = newQuantity;
+                updateCartCount();
+                updateCartSidebar();
+            }
+        }
+
+        function increaseQuantity(productId) {
+            const item = cart.find(item => item.id === productId);
+            if (item && !isVariableWeightItem(item)) {
+                item.quantity += 1;
+                updateCartCount();
+                updateCartSidebar();
+            }
+        }
+
+        function decreaseQuantity(productId) {
+            const item = cart.find(item => item.id === productId);
+            if (item && item.quantity > 1 && !isVariableWeightItem(item)) {
+                item.quantity -= 1;
+                updateCartCount();
+                updateCartSidebar();
+            } else if (item && item.quantity === 1) {
+                removeFromCart(productId);
+            }
+        }
+
+        function updateCartSidebar() {
+            const container = document.getElementById('cartItems');
+            const totalEl = document.getElementById('cartTotalPrice');
+            const totalText = document.getElementById('sidebarTotalText');
+            const minOrderMsg = document.getElementById('sidebarMinOrderMsg');
+            
+            if (!container) return;
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-cart fa-3x"></i>
+                        <p>السلة فارغة</p>
+                        <a href="products.html" class="btn btn-primary">تصفح المنتجات</a>
+                    </div>
+                `;
+                if (totalEl) totalEl.textContent = '0.00 درهم';
+                if (totalText) totalText.textContent = 'المجموع الإجمالي: 0.00 درهم';
+                if (minOrderMsg) minOrderMsg.style.display = 'none';
+                return;
+            }
+            
+            let html = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                total += item.price * (item.quantity || 1);
+                const isVar = isVariableWeightItem(item);
+                const itemIdForButton = item.id;
+                
+                html += `
+                    <div class="cart-item">
+                        <img src="${item.image || 'https://via.placeholder.com/80'}" 
+                             alt="${item.name}" 
+                             class="cart-item-img" 
+                             onerror="handleImageError(this)">
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name || item.name_fr}${isVar ? ` <span class="vw-weight-badge">${item.weight}${item.unit || 'كجم'}</span>` : ''}</div>
+                            <div class="cart-item-price">${item.price.toFixed(2)} درهم</div>
+                            ${!isVar ? `<div class="cart-item-quantity-controls">
+                                <button class="qty-btn qty-minus" onclick="event.stopPropagation(); decreaseQuantity('${item.id}')">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" class="qty-input" value="${item.quantity || 1}" 
+                                       onchange="updateQuantity('${item.id}', parseInt(this.value))" 
+                                       min="1" max="100">
+                                <span class="qty-unit">${item.unit || 'كيلو'}</span>
+                                <button class="qty-btn qty-plus" onclick="event.stopPropagation(); increaseQuantity('${item.id}')">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>` : `<div class="cart-item-weight-display">
+                                <span class="weight-value">${item.weight}${item.unit || 'كجم'}</span>
+                                ${item.quantity > 1 ? `<span class="weight-qty">× ${item.quantity}</span>` : ''}
+                            </div>`}
+                        </div>
+                        <button class="cart-item-remove" onclick="removeFromCart('${itemIdForButton}')" title="حذف">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            if (totalEl) totalEl.textContent = total.toFixed(2) + ' درهم';
+            if (totalText) totalText.textContent = `المجموع الإجمالي: ${total.toFixed(2)} درهم`;
+            
+            const checkoutBtn = document.getElementById('cartCheckout');
+            if (checkoutBtn) {
+                checkoutBtn.disabled = total < 150;
+                checkoutBtn.style.opacity = total < 150 ? '0.5' : '1';
+                checkoutBtn.style.cursor = total < 150 ? 'not-allowed' : 'pointer';
+            }
+            
+            if (minOrderMsg) minOrderMsg.style.display = total < 150 ? 'block' : 'none';
+        }
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cartSidebar');
+            if (sidebar) {
+                sidebar.classList.toggle('active');
+                if (sidebar.classList.contains('active')) updateCartSidebar();
+            }
+        }
+
+        function goToCheckout() {
+            if (cart.length === 0) {
+                showToast('السلة فارغة! أضف بعض المنتجات أولاً', 'error');
+                return;
+            }
+            
+            const total = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+            
+            if (total < 150) {
+                showToast('الحد الأدنى للطلب هو 150 درهم', 'error');
+                return;
+            }
+            
+            window.location.href = 'order.html';
+        }
+
+        // ==================== CONTACT FORM ====================
+        function setupContactForm() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+            
+            // Set submission date
+            document.getElementById('submissionDate').value = new Date().toLocaleString('ar-MA');
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const submitBtn = form.querySelector('.btn-submit');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<div class="loader-spinner" style="width:20px;height:20px;"></div> جاري الإرسال...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const formData = new FormData(form);
+                    const data = {};
+                    formData.forEach((value, key) => { data[key] = value; });
+                    
+                    const response = await fetch('https://api.baserow.io/api/database/rows/table/887021/', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Token ${BASEROW_TOKEN}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    if (response.ok) {
+                        showToast('✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً', 'success');
+                        form.reset();
+                        document.getElementById('submissionDate').value = new Date().toLocaleString('ar-MA');
+                    } else {
+                        showToast('❌ حدث خطأ في إرسال الرسالة، حاول مرة أخرى', 'error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showToast('❌ حدث خطأ في الاتصال، حاول مرة أخرى', 'error');
+                } finally {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        // ==================== MAP ====================
+        function initMap() {
+            mapboxgl.accessToken = 'pk.eyJ1IjoibmFkaW14aXgiLCJhIjoiY2x6cDFjdnFyMHYzMTJrcG8yYzU5d2NpNyJ9.7gQ7gQ7gQ7gQ7gQ7gQ7gQ7g';
+            
+            const map = new mapboxgl.Map({
+                container: 'contactMap',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [-7.6325, 33.5731],
+                zoom: 12
+            });
+            
+            new mapboxgl.Marker({ color: '#2E8B57' })
+                .setLngLat([-7.6325, 33.5731])
+                .setPopup(new mapboxgl.Popup().setHTML('<h4>Qoffa Smart</h4><p>الدار البيضاء، المغرب</p>'))
+                .addTo(map);
+        }
+
+        // ==================== FAQ ====================
+        function setupFAQ() {
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    faqItem.classList.toggle('active');
+                });
+            });
+        }
+
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 تهيئة صفحة اتصل بنا...');
+            
+            showLoader(true);
+            updateCartCount();
+            updateCartSidebar();
+            setupContactForm();
+            setupFAQ();
+            
+            setTimeout(() => {
+                initMap();
+                showLoader(false);
+            }, 1000);
+            
+            // Scroll effects
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('mainHeader');
+                if (header) header.classList.toggle('scrolled', window.scrollY > 50);
+                
+                const backToTop = document.getElementById('backToTop');
+                if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 300);
+            });
+            
+            // Back to top
+            document.getElementById('backToTop')?.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Mobile menu
+            document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
+                document.getElementById('navMenu')?.classList.toggle('active');
+                document.getElementById('cartSidebar')?.classList.remove('active');
+            });
+            
+            // Cart buttons
+            document.getElementById('cartBtn')?.addEventListener('click', () => {
+                document.getElementById('cartSidebar')?.classList.toggle('active');
+                document.getElementById('navMenu')?.classList.remove('active');
+                if (document.getElementById('cartSidebar')?.classList.contains('active')) updateCartSidebar();
+            });
+            
+            document.getElementById('cartClose')?.addEventListener('click', toggleCart);
+            document.getElementById('cartCheckout')?.addEventListener('click', goToCheckout);
+            
+            // Modal buttons
+            document.getElementById('modalCancelBtn')?.addEventListener('click', cancelDelete);
+            document.getElementById('modalConfirmBtn')?.addEventListener('click', confirmProductDelete);
+            
+            // Close modal when clicking outside
+            const modal = document.getElementById('confirmationModal');
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) cancelDelete();
+                });
+            }
+            
+            // Close cart when clicking outside
+            document.addEventListener('click', (e) => {
+                if (preventCartClose) return;
+                
+                const sidebar = document.getElementById('cartSidebar');
+                const cartBtn = document.getElementById('cartBtn');
+                const modalEl = document.getElementById('confirmationModal');
+                
+                if (sidebar?.classList.contains('active')) {
+                    if (!sidebar.contains(e.target) && !cartBtn.contains(e.target) && !modalEl?.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('navMenu')?.classList.remove('active');
+                });
+            });
+            
+            console.log('✅ التهيئة اكتملت بنجاح');
+        });
+
+        // ==================== EXPOSE FUNCTIONS ====================
+        window.cancelDelete = cancelDelete;
+        window.confirmProductDelete = confirmProductDelete;
+        window.showConfirmationModal = showConfirmationModal;
+        window.removeFromCart = removeFromCart;
+        window.updateQuantity = updateQuantity;
+        window.increaseQuantity = increaseQuantity;
+        window.decreaseQuantity = decreaseQuantity;
+        window.toggleCart = toggleCart;
+        window.handleImageError = handleImageError;
+        window.isVariableWeightItem = isVariableWeightItem;
+        window.showToast = showToast;
+        window.vwSyncWithBaserow = vwSyncWithBaserow;
+        window.vwReturnWeightToBaserow = vwReturnWeightToBaserow;
+    </script>
+</body>
+</html>
